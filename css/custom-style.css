@@ -307,7 +307,7 @@ span.nobr {
   display: inline-block;
   width: 1em;
   height: 1em;
-  background: url(assets/icons/venue.svg);
+  background: url(/assets/icons/venue.svg);
   background-size: cover;
   margin-right: 5px;
 }
@@ -321,7 +321,7 @@ span.nobr {
   width: 1em;
   height: 1em;
   display: inline-block;
-  background: url(assets/icons/date.svg);
+  background: url(/assets/icons/date.svg);
   background-size: cover;
   margin-right: 5px;
 }
