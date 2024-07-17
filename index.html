@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Online Action Recognition</title>
+    <title>New Methods for Bridging Symbolic-Geometric Reasoning, Addressing Uncertainty and Action Learning in Task Planning for Robotics</title>
 
     <!--<link rel="stylesheet" href="reveal.js/dist/reset.css">-->
     <!--<link rel="stylesheet" href="reveal.js/dist/reveal.css">-->
     <!--<link rel="stylesheet" href="reveal.js/dist/theme/white.css" id="theme">-->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/white.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.min.css">
 
     <!-- Theme used for syntax highlighted code -->
     <!--<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">-->
@@ -76,26 +76,85 @@
             <p>Desirable qualities in a robot:</p>
 
             <ul>
-              <li>Performance</li>
-              <li>Robustness</li>
-              <li>Flexibility</li>
-              <li>Predictability/Explainability</li>
-              <li>Low set-up effort</li>
+              <li class="fragment">Performance</li>
+              <li class="fragment">Robustness</li>
+              <li class="fragment">Flexibility</li>
+              <li class="fragment">Predictability/Explainability</li>
+              <li class="fragment">Low set-up effort</li>
             </ul>
         </section>
 
         <section>
-            <img class="r-stretch" src="img/motivation.png">
+            <div class="r-stack">
+                <img class="r-stretch" src="img/motivation/frame1.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame2.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame3.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame4.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame5.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame6.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame7.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame8.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame9.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame10.svg">
+            </div>
         </section>
 
         <section>
             <h2 class="numbered-section">Objectives</h2>
+            <div class="r-stack">
+                <img class="r-stretch" src="img/objectives/frame1.svg">
+                <img style="z-index:1;position:fixed;top:180px;left:578px" src="img/objectives/lever_example.gif">
+                <img style="z-index:1;position:fixed;top:398px;left:275px" class="fragment" src="img/objectives/successful-lever.gif" data-fragment-index="1">
+                <img style="z-index:1;position:fixed;top:524px;left:275px" class="fragment" src="img/objectives/unsuccessful-lever.gif" data-fragment-index="1">
+                <img class="r-stretch fragment" src="img/objectives/frame2.svg" data-fragment-index="1">
+                <img class="r-stretch fragment" src="img/objectives/frame3.svg">
+                <img class="r-stretch fragment" src="img/objectives/frame4.svg">
+            </div>
 
 
         </section>
 
         <section>
             <h2 class="numbered-section">Contributions</h2>
+
+            <div class="r-hstack" style="justify-content:space-evenly;">
+                <figure class="fragment semi-fade-in-out">
+                    <img class="" src="img/contributions/first_part.png">
+                    <figcaption style="max-width:400px;">New planning algorithms (<strong>O1,O2,O3</strong>)</figcaption>
+                </figure>
+
+                <figure class="fragment semi-fade-in-out">
+                    <img class="" src="img/contributions/second_part.png">
+                    <figcaption style="max-width:400px;">Learning algorithms (<strong>O4</strong>)</figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="r-hstack" style="justify-content:space-evenly;">
+                <figure class="">
+                    <img class="" src="img/contributions/first_part.png">
+                    <figcaption style="max-width:400px;">New planning algorithms (<strong>O1,O2,O3</strong>)</figcaption>
+                </figure>
+
+                <img src="img/contributions/first_part_detail.svg">
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="r-hstack" style="justify-content:space-evenly;">
+                <img src="img/contributions/second_part_detail.svg">
+
+                <figure class="">
+                    <img class="" src="img/contributions/second_part.png">
+                    <figcaption style="max-width:400px;">Learning algorithms (<strong>O4</strong>)</figcaption>
+                </figure>
+            </div>
+
         </section>
 
         <section>
@@ -577,11 +636,11 @@
       <div class="frame right"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/notes/notes.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/markdown/markdown.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/math/math.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/zoom/zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/zoom/zoom.min.js"></script>
 
     <!--<script src="reveal.js/dist/reveal.js"></script>-->
     <!--<script src="reveal.js/plugin/notes/notes.js"></script>-->
@@ -590,9 +649,9 @@
     <!--<script src="reveal.js/plugin/math/math.js"></script>-->
 
     <!-- D3 Graphviz -->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js" type="javascript/worker"></script>
-    <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+    <!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+    <!--<script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js" type="javascript/worker"></script>-->
+    <!--<script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>-->
 
     <script>
       // More info about initialization & config:
