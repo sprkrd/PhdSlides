@@ -195,32 +195,8 @@
         </section>
 
         <section>
-            <h3 class="numbered-section">Dual-arm Symbolic-motion Planning</h3>
-
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <div>
-                <p>We are concerned with tasks...</p>
-                <ul>
-                    <li class="fragment">... that require symbolic-geometric reasoning (<strong>O1</strong>)</li>
-                    <li class="fragment">... with partial observability (<strong>O3</strong>)</li>
-                </ul>
-              </div>
-              <div class="r-vstack">
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/dual-arm-planning/game-introduction.gif">
-                  <figcaption>Example application</figcaption>
-                </figure>
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/dual-arm-planning/picker-and-catcher.png">
-                  <figcaption>Robot set-up</figcaption>
-                </figure>
-              </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="fragment">
+              <figure class="">
                 <img style="width:400px;" src="img/dual-arm-planning/example-symbolic.png">
                 <figcaption>Symbolic reasoning</figcaption>
               </figure>
@@ -243,7 +219,7 @@
         <section>
             <p>Second principle: <strong>handle uncertainty explicitly</strong> and <strong>reshape environment</strong>:</p>
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="fragment">
+              <figure class="">
                 <img style="width:400px;" src="img/dual-arm-planning/dispel-noise.png">
                 <figcaption>Noise-dispelling action</figcaption>
               </figure>
@@ -274,15 +250,174 @@
         </section>
 
         <section>
+            <figure>
+                <video id="itm-video" loop controls onloadstart="this.playbackRate = 10;">
+                    <source data-src="http://www.iri.upc.edu/groups/perception/dual_arm_planning/video/itm_demo_real.mp4" type="video/mp4">
+                </video>
+                <figcaption>Qualitative experiment</figcaption>
+            </figure>
+        </section>
+
+        <section>
             <h3 class="numbered-section">Planning in Face of Stochastic Outcomes</h3>
+            <div class="r-hstack" style="justify-content:space-evenly;">
+              <div>
+                <p>We are concerned with tasks...</p>
+                <ul>
+                    <li class="fragment">... that require reasoning with action stochasticity (<strong>O2</strong>),</li>
+                    <li class="fragment">where part of the state may be hidden (<strong>O3</strong>),</li>
+                    <li class="fragment">and where classical algorithms are computationlly expensive</li>
+                </ul>
+              </div>
+            <figure class="fragment">
+              <img style="width:200px;" src="img/handling-uncertain-outcomes/unscrew.gif">
+              <img style="width:200px;" src="img/handling-uncertain-outcomes/remove-pcb.gif">
+              <figcaption>Disassembly use case</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section>
+            <p>State represented as (P)PDDL objects and predicates:</p>
+            <img class="r-stretch" src="img/handling-uncertain-outcomes/state.png">
+        </section>
+
+        <section>
+            <div style="position:relative; top:-100px;">
+            <p>Stochastic actions (MDP representation)</p>
+            <img style="" src="img/handling-uncertain-outcomes/stochastic-action.png">
+            <img style="height:200px;position:fixed;left:184px;top:204px;" src="img/handling-uncertain-outcomes/successful-action.gif">
+            <img style="height:200px;position:fixed;left:807px;top:204px;" src="img/handling-uncertain-outcomes/unsuccessful-action.gif">
+            </div>
+        </section>
+
+        <section>
+            <p>First principle: simplify task (subtask selection)</p>
+            <img class="r-stretch" src="img/handling-uncertain-outcomes/subtask-selection.png">
+        </section>
+
+        <section>
+            <p>Second principle: determinization</p>
+            <img class="r-stretch" src="img/handling-uncertain-outcomes/determinization.png">
+        </section>
+
+        <section>
+            <p>Alpha-Cost Transition Likelihood determinization</p>
+            <img src="img/handling-uncertain-outcomes/actl.png">
+            <img style="width:600px;" src="img/handling-uncertain-outcomes/safety-eagerness.png">
+        </section>
+
+        <section>
+            <p>Results</p>
+            <img src="img/handling-uncertain-outcomes/results.png">
         </section>
 
         <section>
             <h3 class="numbered-section">Leveraging Simulators to Minimize Risk</h3>
+            <div class="r-hstack" style="justify-content:space-evenly;">
+              <div>
+                <p>We are concerned with...</p>
+                <ul>
+                    <li class="fragment">... leveraging two environments (learning and target) for safe execution and learning (<strong>O2,O4</strong>).</li>
+                    <li class="fragment">... disambiguate between similar actions with physical simulators (<strong>O1</strong>).</li>
+                </ul>
+              </div>
+            <figure class="fragment">
+              <img style="width:400px;" src="img/leveraging-simulators/lever-failure1.gif">
+              <img style="width:400px;" src="img/leveraging-simulators/lever-failure2.gif">
+              <figcaption>Examples of failed lever actions</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <section>
+            <p>Proposed architecture</p>
+
+            <img style="width:400px;" src="img/leveraging-simulators/architecture.png">
+            <img style="position:fixed;width:200px;top:450px;left:220px;" src="img/leveraging-simulators/lever-success-sim.gif">
+            <img style="position:fixed;width:200px;top:450px;left:810px;" src="img/leveraging-simulators/lever-success.gif">
+        </section>
+
+        <section>
+            <p>Multiple Environment Noisy Indeterministic Deictic (MENID) rules</p>
+
+            <img src="img/leveraging-simulators/MENID_rules.png">
+        </section>
+
+        <section>
+            <p>Estimation of categorical distributions</p>
+            <ul>
+                <li class="">$ ^ix_i $: Number of times event $ j $ has occurred in environment $ i $</li>
+                <li class="fragment">$ N_i $: Total number of events</li>
+                <li class="fragment">If simulation (environment 2) reflects reality (environment 1) perfectly:$$ ^1p_j \approx \frac{^1x_j + ^2x_j}{N_1 + N_2} $$</li>
+            </ul>
+        </section>
+
+        <section>
+            <ul>
+                <li class="">However, that isn't generally the case. We propose:$$^1p_j \approx \frac{^1x_j + \frac{m}{\sqrt{1+N_1}} ^2x_j}{N_1 + \frac{m}{\sqrt{1 + N_1}} N_2}$$</li>
+                <figure>
+                    <img src="img/leveraging-simulators/sample.png">
+                    <figcaption>Approximation of the estimation error based on sample size</figcaption>
+                </figure>
+            </ul>
+        </section>
+
+        <section>
+            <p>Algorithm overview</p>
+
+            <p>Video here</p>
+        </section>
+
+        <section>
+            <p>Influence of model resolution</p>
+            <div class="r-hstack">
+                <div class="r-vstack" style="">
+                    <figure>
+                        <img style="width:200px;" src="img/leveraging-simulators/exp1.gif">
+                        <figcaption>Lever action</figcaption>
+                    </figure>
+                    <figure>
+                        <img style="width:200px;" src="img/leveraging-simulators/exp2.gif">
+                        <figcaption>Shake action</figcaption>
+                    </figure>
+                    <figure>
+                        <img style="width:200px;" src="img/leveraging-simulators/exp3.gif">
+                        <figcaption>Suction action</figcaption>
+                    </figure>
+                </div>
+                <figure>
+                    <img src="img/leveraging-simulators/model-resolution-plot.png">
+                    <figcaption>Effect of model resolution on<br>time and accuracy</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <div class="r-vstack">
+                <figure>
+                    <img src="img/leveraging-simulators/results-simulation.png">
+                    <figcaption>Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/leveraging-simulators/results-robot.png">
+                    <figcaption>Results simulation $ \rightarrow $ real robot</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section>
             <h2 class="numbered-section">Learning Planning Operators</h2>
+
+            <div class="r-hstack" style="justify-content:space-evenly;">
+                <figure style="opacity:0.3;">
+                    <img class="" src="img/contributions/first_part.png">
+                </figure>
+
+                <figure style="">
+                    <img class="" src="img/contributions/second_part.png">
+                </figure>
+            </div>
         </section>
 
         <section>
@@ -303,438 +438,6 @@
 
         <section>
             <h2 class="numbered-section">Take-aways</h2>
-        </section>
-
-        <section>
-          <h2 class="numbered-section">Motivation</h1>
-          <dl>
-            <dt>T6.1 <span class="checkmark fragment" data-fragment-index="1"/></dt>
-            <dd>Action Planning (M1-M36)</dd>
-            <dt>T6.2 <span class="checkmark fragment" data-fragment-index="1"/></dt>
-            <dd>Replanning in case of dead-ends or unmatching effects (M13-M36)</dd>
-            <dt>T6.3 <span class="checkmark fragment" data-fragment-index="1"/></dt>
-            <dd>Action monitoring and reaction to failed executions (M25-M42)</dd>
-          </dl>
-
-          <aside class="notes">
-            As a brief reminder of the Project Management situation, we were assigned
-            three tasks. Already in the last general assembly, (tap) these
-            tasks were officially over.
-          </aside>
-        </section>
-
-        <section>
-          <h3>Deliverables</h3>
-          <dl>
-            <dt>D6.1 <span class="checkmark fragment" data-fragment-index="1">(Feb 6, 2018)</span></dt>
-            <dd>Planner software prototype for action selection (M12)</dd>
-            <dt>D6.2 <span class="checkmark fragment" data-fragment-index="1">(Feb 20, 2019)</span></dt>
-            <dd>Planner software prototype for replanning (M24)</dd>
-            <dt>D6.3 <span class="checkmark fragment" data-fragment-index="1">(Mar 23, 2020)</span></dt>
-            <dd>Planner software prototype for generalization (M36)</dd>
-          </dl>
-
-          <aside class="notes">
-            Similarly, we had three deliverables. (Tap) All of these have
-            already been completed and delivered with their corresponding report.
-          </aside>
-        </section>
-
-        <section>
-          <h3>Contributions</h3>
-          <p>Outside of the initially planned tasks and deliveries:</p>
-          <ul>
-            <li>Dealing with partial observability</li>
-            <li>Acquire new actions from pre-state and post-state</li>
-          </ul>
-
-          <aside class="notes">
-            Therefore, the contributions I'm about to discuss are outside of
-            the initial Project Plan.
-
-            During the last months, we've put most of the focus on dealing
-            with partial observability. On the other hand, we have already
-            the tools for acquiring the symbolic aspect of action models.
-          </aside>
-        </section>
-
-        <section>
-          <section>
-            <h3 class="r-fit-text">Dealing with partial observability</h3>
-          </section>
-          <section>
-            <h3>Sources of error</h3>
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <ul>
-                <li class="fragment fade-in-then-semi-out" data-fragment-index="1">Misdetection of components</li>
-                <li class="fragment fade-in-then-semi-out" data-fragment-index="2">Misclassification of components</li>
-                <li class="fragment" data-fragment-index="3">Misjudgement of precedence relationships</li>
-              </ul>
-
-              <div class="r-stack" style="width:500px">
-                <img class="fragment fade-in-then-out" src="img/misdetection.png" data-fragment-index="1">
-                <img class="fragment fade-in-then-out" src="img/misclassification.png" data-fragment-index="2">
-                <img class="fragment" src="img/precedence.png" data-fragment-index="3">
-              </div>
-            </div>
-            <aside class="notes">
-              In the first of these contributions, we've considered the following problems.
-              (Tap) The problem of false positives and false negatives. That happens for instance when
-              holes or other circular structures are confused for screws, or when screws are not detected.
-              (Tap) Misclassification occurs when a part is detected, but assigned to a category
-              different from its ground truth.
-              (Tap) The final problem we handle is identifying precedence relationships,
-              even when these are dubious. For instance, in case of overlapping parts,
-              there's usually ambiguity, like here in the right. Even when there's
-              no physical contact, some parts may precede others.
-            </aside>
-          </section>
-          <section>
-            <h3>Observations</h3>
-            Difference between states and observations: $ S \neq O(S) $
-            <div class="r-hstack" style="justify-content:space-evenly">
-              <figure>
-              <img src="img/State_1.png" height="300px">
-              <figcaption>$ S $</figcaption>
-              </figure>
-              <div class="right-arrow"></div>
-              <figure>
-              <img src="img/Observation_1.png" height="300px">
-              <figcaption>$ O(S) $</figcaption>
-              </figure>
-            </div>
-            <aside class="notes">
-              In order to deal with these issues, we differentiate clearly from
-              states and observations. Here, in the left hand side, you can
-              see a simulated device. The picture shows the ground truth of a
-              very simplified hard-drive scene: solid edges represent precedence
-              relations, and dotted
-              edges precedence relations with occlusions. Hidden parts are
-              shown with a gray background. Of course, we would not be
-              able to know all this information in a real setting, so the
-              picture in the right shows a realistic observation. In this
-              observation, hidden parts and parts in the side that is facing
-              away from the camera are not present. In addition, some information
-              may be wrong: for instance, the precedence between part3 and part1
-              is not observed correctly. The planner has to deal with observations
-              like these, far from perfect.
-            </aside>
-          </section>
-          <section>
-            <h3>Belief states</h3>
-            Factored probability distribution over possible predicates: $ b(S) = \prod_{t \in T} b_t (t) $
-            <div class="r-hstack" style="justify-content:space-evenly">
-              <figure>
-              <img src="img/Observation_1.png" height="300px">
-              <figcaption>$ O(S) $</figcaption>
-              </figure>
-              <div class="right-arrow"></div>
-              <figure>
-              <img src="img/Belief_1.png" height="300px">
-              <figcaption>$ b_t(t) $</figcaption>
-              </figure>
-            </div>
-            <aside class="notes">
-              To this end, the planner maintains a belief about the current
-              state. We adopt the most manageable of all distributions: a true/false
-              probability for each predicate, and all predicates are independent.
-              Therefore, the probability of any state interpretation can be
-              calculated simply as the product of many binary factors. In this
-              picture, we show how a probability distribution can be extracted
-              from an observation. Notice that, even though the precedence
-              relation between part3 and part1 is not in the observation, the
-              belief that part3 precedes part1 is not zero.
-            </aside>
-          </section>
-          <section>
-            <h3>Update of belief state</h3>
-            <p>Next belief state $ b_{n+1}(S) $ given previous $ b_n(S) $, previously
-            executed action $ a_n $ and new observation $ O_{n+1} $?</p>
-            <div class="r-hstack" style="justify-content:space-evenly">
-              <div class="algorithm" style="font-size:16px; --algorithm-id:'1';">
-                <p class="caption">Particle filtering with importance sampling</p>
-                <p><em>Input:</em> Number of particles $ N $, previous belief $ b_n(S) $, previous action $ a_n $, next observation $ O_{n+1} $</p>
-                <p><em>Output:</em> Updated belief $ b_{n+1}(S) $</p>
-                <div class="algorithmic">
-                  <p class="line">$ p \leftarrow \{ \} $</p>
-                  <p class="line">$ i \leftarrow 0 $</p>
-                  <p class="line"><em>while</em> $ i \lt N $ <em>do</em></p>
-                  <div class="nested-block">
-                    <p class="line fragment highlight-current-red" data-fragment-index="1">$ s_i \leftarrow $<span class="function">Sample</span>($ b_n(s) $)</p>
-                    <p class="line fragment highlight-current-red" data-fragment-index="2">$ s'_i \leftarrow $<span class="function">Sample</span>($ \mathbb{P}(s'|s,a_n) $)</p>
-                    <p class="line fragment highlight-current-red" data-fragment-index="3">$ w_i \leftarrow \mathbb{P}(O_{n+1}|s') $</p>
-                    <p class="line">$ p \leftarrow p \cup \{ (w_i,s'_i) \} $</p>
-                    <p class="line">$ i \leftarrow i+1 $</p>
-                  </div>
-                  <p class="line"><em>end while</em></p>
-                  <p class="line">$ b_{n+1} \leftarrow $ empty map</p>
-                  <p class="line fragment highlight-current-red" data-fragment-index="4"><em>for</em> $ t \in T $ <em>do</em></p>
-                  <div class="nested-block fragment highlight-current-red" data-fragment-index="4">
-                    <p class="line">$ b_{n+1}[t] \leftarrow \frac{\sum_{i|t \in s'_i} w_i}{ \sum_i w_i} $</p>
-                  </div>
-                  <p class="line fragment highlight-current-red" data-fragment-index="4"><em>end for</em></p>
-                  <p class="line"><em>return</em> $ b_{n+1} $</p>
-                </div>
-              </div>
-              <div class="r-stack" style="width:400px;">
-                <img class="fragment fade-out" data-fragment-index="1" src="img/Update_belief_alg_step0.png">
-                <img class="fragment fade-in-then-out" data-fragment-index="1" src="img/Update_belief_alg_step1.png">
-                <img class="fragment fade-in-then-out" data-fragment-index="2" src="img/Update_belief_alg_step2.png">
-                <img class="fragment fade-in-then-out" data-fragment-index="3" src="img/Update_belief_alg_step3.png">
-                <p class="fragment" data-fragment-index="4">Probability of $ t $ estimated as its relative frequency
-                in all sampled $ S_{n+1} $, weighted by $ w_i $</p>
-              </div>
-            </div>
-            <aside class="notes">
-              The belief is updated after each new observation, typically
-              obtained after executing an action. We use a particle filter with
-              importance sampling. They way it works is, we simulate N particles.
-              For each one, (tap) we sample the
-              source state from the current belief distribution. (tap) We sample
-              a destination state using the transition model, the source state
-              and the action. (tap) We compute the probability of generating the
-              observation given the sampled destination state. (Tap) Then, the probability
-              of each predicate is estimated simply as a weighted average, using the
-              observation probabilities as weights.
-            </aside>
-          </section>
-          <section>
-
-            <div class="r-vstack">
-
-            <div class="r-hstack" style="">
-              <figure>
-              <img src="img/Observation_1.png" height="250px">
-              </figure>
-              <div class="right-arrow"></div>
-              <figure>
-              <img src="img/Belief_1.png" height="250px">
-              </figure>
-            </div>
-
-            <div class="down-arrow">$ a = \mathrm{handle}(\mathit{part}_6, \mathit{motor\_contacts})$</div>
-
-            <div class="r-hstack" style="">
-              <figure class="fragment" data-fragment-index="1">
-              <img src="img/Observation_2.png" height="250px">
-              <figcaption>$ O(S) $</figcaption>
-              </figure>
-              <div class="fragment right-arrow" data-fragment-index="2"></div>
-              <figure class="fragment" data-fragment-index="2" >
-              <img src="img/Belief_2.png" height="250px">
-              <figcaption>$ b_t(t) $</figcaption>
-              </figure>
-            </div>
-            </div>
-
-            <aside class="notes">
-              And here's how this would work in the previous example, which
-              depicts a pcb, a screw and the connector from the pcb to the
-              motor. We start
-              with an initial observation and belief. Then, after cutting the
-              connector, we obtain a new observation. The precedence relation
-              between part3 (the screw) and part1 (the pcb) is correctly
-              observed this time. (Tap) This is the new belief state, notice
-              that the probability of part3 preceding part1 has risen due to this.
-              Additionally, the confidence on part3 being a torx8 screw is larger,
-              and there's a new predicate with non zero probability related that says
-              that part6 has been disposed of.
-            </aside>
-          </section>
-          <section>
-            <h3>Assumption-based planning</h3>
-            <p class="fragment fade-in-then-semi-out" data-fragment-index="1">Main idea: determinize belief making assumptions over the state.</p>
-            <p class="fragment fade-in-then-semi-out" data-fragment-index="2">The cost of the assumptions depends on the probability $ p $ of each predicate.</p>
-            <p class="fragment" data-fragment-index="3">Example:</p>
-            <div class="r-hstack fragment" style="justify-content:space-evenly" data-fragment-index="3">
-              <img src="img/state_step_0.png">
-<pre style="width:500px">
-1: assume(not(fixed(y,x)))
-2: assume(not(retrieved(y)))
-3: lever(y)
-</pre>
-            </div>
-            <aside class="notes">
-              In the previous GA I already talked about (tap) introducing actions, that are internal
-              to the planner, to assume that a predicate is true or false. (tap) The cost of assuming
-              the falsehood or truth of that predicate depends on its probability. (tap) This is one
-              of the examples I showed: the objective of the planner is to retrieve some component y which
-              may or may not be fixed by x. Then, it assumes that y is not fixed, and then proceeds
-              to lever the component out.
-            </aside>
-          </section>
-          <section>
-            <h3>Information gathering actions</h3>
-            <p class="fragment fade-in-then-semi-out">Action that does not affect the world directly, only the internal
-            belief of the robot.</p>
-            <p class="fragment fade-in-then-semi-out"><strong>Example:</strong> trigger perception again. <em>Question: change angle of view a little bit?</em></p>
-            <p class="fragment"><strong>Drawback of assumption planning:</strong> not obvious how to
-            incentivize actions with no physical effects.</p>
-          </section>
-          <section>
-            <h3>Monte-Carlo Tree Search (MCTS)</h3>
-            <p class="fragment fade-in-then-semi-out">MCTS decides <strong>major strategic decisions</strong>: <strong>observe</strong> or <strong>handle part</strong></p>
-            <p class="fragment fade-in-then-semi-out">MCTS is a <strong>simulation-based algorithm</strong>, and considers every action regardless of their type.</p>
-            <p class="fragment fade-in-then-semi-out">New opportunity: <strong>assign scores to different components</strong><em>(ECYC: maybe economic value)?</em></p>
-          </section>
-          <section>
-            <h3>Action refining</h3>
-            <p class="fragment fade-in-then-semi-out">Actions output by MCTS have to be broken down into simple actions</p>
-
-            <p class="fragment">These smaller plans can be approached with assumption-based planning</p>
-          </section>
-          <section>
-            <div class="r-vstack">
-
-              <div class="r-hstack" style="">
-                <figure>
-                <img src="img/Observation_1.png" height="250px">
-                </figure>
-                <div class="right-arrow"></div>
-                <figure>
-                <img src="img/Belief_1.png" height="250px">
-                </figure>
-              </div>
-
-              <p>$ a = \mathrm{handle}(\mathit{part}_6, \mathit{motor\_contacts}) $ expanded into</p>
-              <ol class="fragment">
-                <li>assume(not(precedes($ \mathit{part}_1 $, $ \mathit{part}_6 $)))
-                <li>switch_tool(cutting_tool)</li>
-                <li>cut($ \mathit{part}_6 $)
-              </ol>
-            </div>
-          </section>
-        </section>
-        
-        <section>
-          <section>
-            <h3 class="r-fit-text">Action acquisition</h3>
-          </section>
-
-          <section>
-            <h3>Learning new actions</h3>
-            <ul>
-            <li class="fragment fade-in-then-semi-out"><strong>Learn symbolic structure</strong> of new action</li>
-            <li class="fragment fade-in-then-semi-out">We use <strong>Action Unification</strong> (Suárez-Hernández et al, 2021)</li>
-            <li class="fragment"><strong>Mild requirements</strong>: state before and after action demonstration</li>
-            </ul>
-
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h3 class="r-fit-text">Benchmarks</h3>
-          </section>
-          <section>
-            <h3>Virtual disassembly environment</h3>
-            <div class="r-stack">
-              <figure class="fragment fade-out" data-fragment-index="1">
-              <img src="img/simudemo0.png">
-              <figcaption>$ S_0 $, next action: $ a_0 = $ equip_tool(torx8_screwdriver)</figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out" data-fragment-index="1">
-              <img src="img/simudemo1.png">
-              <figcaption>$ S_1 $, next action: $ a_1 = $ unscrew(part3) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo2.png">
-              <figcaption>$ S_2 $, next action: $ a_2 = $ unscrew(part4) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo3.png">
-              <figcaption>$ S_3 $, next action: $ a_3 = $ unscrew(part5) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo4.png">
-              <figcaption>$ S_4 $, next action: $ a_4 = $ unscrew(part2) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo5.png">
-              <figcaption>$ S_5 $, next action: $ a_5 = $ equip_tool(cutting_tool) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo6.png">
-              <figcaption>$ S_6 $, next action: $ a_6 = $ cut(part6) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo7.png">
-              <figcaption>$ S_7 $, next action: $ a_7 = $ equip_tool(flat_screwdriver) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo8.png">
-              <figcaption>$ S_8 $, next action: $ a_8 = $ lever(part6) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo9.png">
-              <figcaption>$ S_9 $, next action: $ a_9 = $ lever(part6) </figcaption>
-              </figure>
-
-              <figure class="fragment fade-in-then-out">
-              <img src="img/simudemo10.png">
-              <figcaption>$ S_{10} $, next action: $ a_{10} = $ ... </figcaption>
-              </figure>
-            </div>
-          </section>
-          <section>
-            <h3>Quality metrics</h3>
-            <p style="text-align:left;">Metrics:</p>
-            <ul>
-              <li class="fragment fade-in-then-semi-out"><strong>Coverage (%):</strong> Percentage of devices fully disassembled</li>
-              <li class="fragment fade-in-then-semi-out"><strong>Avg. Completion (%):</strong> Avg. proportion of disposed parts</li>
-              <li class="fragment fade-in-then-semi-out"><strong>Avg. Score:</strong> Avg. value of disposed parts</li>
-              <li class="fragment"><strong>Avg. Cost:</strong> Avg. time spent per device.
-            </ul>
-          </section>
-          <section>
-            <h3>B6.1: plan quality</h3>
-            <p class="fragment fade-in-then-semi-out" style="text-align:left;">Evaluation of quality metrics in a <strong>virtual environment</strong>
-            with hard-drives and GPUs with random variations, as well as
-            several (+100) procedurally generated devices. Configurations:</p>
-            <ol>
-              <li class="fragment fade-in-then-semi-out">(Baseline) Random decision maker</li>
-              <li class="fragment fade-in-then-semi-out">(Baseline) Reactive strategy: select ASC with highest confidence</li>
-              <li class="fragment fade-in-then-semi-out">(Baseline) Planner with perfect knowledge of current state</li>
-              <li class="fragment fade-in-then-semi-out">Re-planner (D6.1, D6.2)</li>
-              <li class="fragment fade-in-then-semi-out">Assumption-based planner</li>
-              <li class="fragment">MCTS planner</li>
-            </ol>
-          </section>
-          <section>
-            <h3>Hypotheses</h3>
-            <ul>
-              <li class="fragment fade-in-then-semi-out">2 and 4 get stuck more often than 5 and 6</li>
-              <li class="fragment fade-in-then-semi-out">1 ranks lowest in coverage and time</li>
-              <li class="fragment fade-in-then-semi-out">3 should be indicative of the best we can do</li>
-              <li class="fragment">4, 5 and 6 have bettwe coverage than 1 and 2.
-            </ul>
-          </section>
-          <section>
-            <h3>B6.2: Benefit of information-gathering actions</h3>
-            <p style="text-align:left;">Ablation-study to analyze benefit of
-            information gathering actions (only MCTS approach).</p>
-          </section>
-          <section>
-            <h3>Hypotheses</h3>
-            <ul>
-              <li>MCTS exhibits higher
-              coverage and avg. completion with information gathering than
-              without, but requires more time.</li>
-            </ul>
-          </section> 
-        </section>
-
-        <section>
-          <p class="r-fit-text">Thank you</p>
         </section>
 
       </div>
@@ -766,6 +469,7 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
+        autoPlayMedia: true,
         hash: true,
         slideNumber: "c/t",
         margin: 0.08,
