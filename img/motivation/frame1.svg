@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="210mm" height="148mm" viewBox="0 0 21000 14800" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+<svg version="1.2" width="280mm" height="157.5mm" viewBox="0 0 28000 15750" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
-   <rect x="0" y="0" width="21000" height="14800"/>
+   <rect x="0" y="0" width="28000" height="15750"/>
   </clipPath>
   <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
-   <rect x="21" y="14" width="20958" height="14771"/>
+   <rect x="28" y="15" width="27944" height="15719"/>
   </clipPath>
  </defs>
  <defs>
@@ -89,40 +89,40 @@
      <g class="Page">
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="3547" y="7637" width="12686" height="350"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="3549" y="8937" width="20265" height="350"/>
         <g>
          <defs>
-          <linearGradient id="gradient1" x1="8228" y1="4934" x2="11551" y2="10689" gradientUnits="userSpaceOnUse">
+          <linearGradient id="gradient1" x1="11072" y1="4593" x2="16290" y2="13630" gradientUnits="userSpaceOnUse">
            <stop offset="0" style="stop-color:rgb(255,255,0)"/>
            <stop offset="1" style="stop-color:rgb(42,96,153)"/>
           </linearGradient>
          </defs>
-         <path style="fill:url(#gradient1)" d="M 9890,7986 L 3547,7986 3547,7637 16232,7637 16232,7986 9890,7986 Z"/>
+         <path style="fill:url(#gradient1)" d="M 13681,9286 L 3549,9286 3549,8937 23813,8937 23813,9286 13681,9286 Z"/>
         </g>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="3548" y="6231" width="12686" height="883"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="8358" y="6805"><tspan fill="rgb(0,0,0)" stroke="none">adaptiveness </tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="3549" y="7431" width="20265" height="883"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="12149" y="8005"><tspan fill="rgb(0,0,0)" stroke="none">adaptiveness </tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id5">
-        <rect class="BoundingBox" stroke="none" fill="none" x="3547" y="6849" width="12687" height="352"/>
-        <path fill="rgb(0,0,0)" stroke="none" d="M 3547,6945 L 14904,6945 14904,6849 16233,7024 14904,7200 14904,7103 3547,7103 3547,6945 Z M 3547,6849 L 3547,6849 Z M 16233,7200 L 16233,7200 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="3549" y="7966" width="20266" height="637"/>
+        <path fill="rgb(0,0,0)" stroke="none" d="M 3549,8156 L 21917,8156 21917,7966 23814,8284 21917,8602 21917,8411 3549,8411 3549,8156 Z M 3549,7966 L 3549,7966 Z M 23814,8602 L 23814,8602 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id6">
-        <rect class="BoundingBox" stroke="none" fill="none" x="16108" y="6572" width="4166" height="3540"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="17296" y="7362"><tspan fill="rgb(0,0,0)" stroke="none">Full </tspan></tspan><tspan class="TextPosition" x="16585" y="8184"><tspan fill="rgb(0,0,0)" stroke="none">learning</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="16358" y="9006"><tspan fill="rgb(0,0,0)" stroke="none">approach </tspan></tspan><tspan class="TextPosition" x="16460" y="9828"><tspan fill="rgb(0,0,0)" stroke="none">(e.g. RL)</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="23836" y="7872" width="4166" height="3540"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="25024" y="8662"><tspan fill="rgb(0,0,0)" stroke="none">Full </tspan></tspan><tspan class="TextPosition" x="24313" y="9484"><tspan fill="rgb(0,0,0)" stroke="none">learning</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="24086" y="10306"><tspan fill="rgb(0,0,0)" stroke="none">approach </tspan></tspan><tspan class="TextPosition" x="24188" y="11128"><tspan fill="rgb(0,0,0)" stroke="none">(e.g. RL)</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id7">
-        <rect class="BoundingBox" stroke="none" fill="none" x="317" y="6634" width="3411" height="3540"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="1198" y="7424"><tspan fill="rgb(0,0,0)" stroke="none">Fully </tspan></tspan><tspan class="TextPosition" x="688" y="8246"><tspan fill="rgb(0,0,0)" stroke="none">scripted </tspan></tspan><tspan class="TextPosition" x="567" y="9068"><tspan fill="rgb(0,0,0)" stroke="none">behavior</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="318" y="7934" width="3411" height="3540"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="1199" y="8724"><tspan fill="rgb(0,0,0)" stroke="none">Fully </tspan></tspan><tspan class="TextPosition" x="689" y="9546"><tspan fill="rgb(0,0,0)" stroke="none">scripted </tspan></tspan><tspan class="TextPosition" x="568" y="10368"><tspan fill="rgb(0,0,0)" stroke="none">behavior</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>

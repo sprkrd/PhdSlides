@@ -70,21 +70,11 @@
 
         </section>
 
+
         <section>
+
             <h2 class="numbered-section">Motivation</h2>
 
-            <p>Desirable qualities in a robot:</p>
-
-            <ul>
-              <li class="fragment">Performance</li>
-              <li class="fragment">Robustness</li>
-              <li class="fragment">Flexibility</li>
-              <li class="fragment">Predictability/Explainability</li>
-              <li class="fragment">Low set-up effort</li>
-            </ul>
-        </section>
-
-        <section>
             <div class="r-stack">
                 <img class="r-stretch" src="img/motivation/frame1.svg">
                 <img class="r-stretch fragment" src="img/motivation/frame2.svg">
@@ -96,6 +86,10 @@
                 <img class="r-stretch fragment" src="img/motivation/frame8.svg">
                 <img class="r-stretch fragment" src="img/motivation/frame9.svg">
                 <img class="r-stretch fragment" src="img/motivation/frame10.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame11.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame12.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame13.svg">
+                <img class="r-stretch fragment" src="img/motivation/frame14.svg">
             </div>
         </section>
 
@@ -118,43 +112,24 @@
             <h2 class="numbered-section">Contributions</h2>
 
             <div class="r-hstack" style="justify-content:space-evenly;">
-                <figure class="fragment semi-fade-in-out">
+                <figure style="width:500px;" class="fragment">
                     <img class="" src="img/contributions/first_part.png">
-                    <figcaption style="max-width:400px;">New planning algorithms (<strong>O1,O2,O3</strong>)</figcaption>
+                    <figcaption>New planning algorithms</figcaption>
                 </figure>
 
-                <figure class="fragment semi-fade-in-out">
+                <figure style="width:500px;" class="fragment">
                     <img class="" src="img/contributions/second_part.png">
-                    <figcaption style="max-width:400px;">Learning algorithms (<strong>O4</strong>)</figcaption>
+                    <figcaption>Learning algorithms</figcaption>
                 </figure>
             </div>
 
         </section>
 
         <section>
-
-            <div class="r-hstack" style="justify-content:space-evenly;">
-                <figure class="">
-                    <img class="" src="img/contributions/first_part.png">
-                    <figcaption style="max-width:400px;">New planning algorithms (<strong>O1,O2,O3</strong>)</figcaption>
-                </figure>
-
-                <img class="fragment" src="img/contributions/first_part_detail.svg">
+            <div class="r-stack">
+                <img class="r-stretch" src="img/contributions/frame1.svg">
+                <img class="fragment r-stretch" src="img/contributions/frame2.svg">
             </div>
-
-        </section>
-
-        <section>
-
-            <div class="r-hstack" style="justify-content:space-evenly;">
-                <img class="fragment" src="img/contributions/second_part_detail.svg">
-
-                <figure class="">
-                    <img class="" src="img/contributions/second_part.png">
-                    <figcaption style="max-width:400px;">Learning algorithms (<strong>O4</strong>)</figcaption>
-                </figure>
-            </div>
-
         </section>
 
         <section>
@@ -173,61 +148,70 @@
         <section>
             <h3 class="numbered-section">Dual-arm Symbolic-motion Planning</h3>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <div>
-                <p>We are concerned with tasks...</p>
-                <ul>
-                    <li class="fragment">... that require symbolic-geometric reasoning (<strong>O1</strong>)</li>
-                    <li class="fragment">... with partial observability (<strong>O3</strong>)</li>
-                </ul>
-              </div>
-              <div class="r-vstack">
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/dual-arm-planning/game-introduction.gif">
-                  <figcaption>Example application</figcaption>
+            <div class="r-vstack" style="justify-content:space-evenly;">
+              <div class="r-hstack spaced-horizontally">
+
+                <figure style="width:500px;">
+                  <img src="img/dual-arm-planning/game-introduction.gif">
+                  <figcaption>Complex manipulation...</figcaption>
                 </figure>
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/dual-arm-planning/picker-and-catcher.png">
-                  <figcaption>Robot set-up</figcaption>
+
+                <figure style="width:500px;" class="fragment">
+                  <img src="img/dual-arm-planning/picker-and-catcher.png">
+                  <figcaption>... with dual-arm robot set-ups</figcaption>
                 </figure>
               </div>
+              <div class="reference" style="padding-top: 50px;" >
+                  A. Suárez-Hernández, G. Alenyà, and C. Torras. "Interleaving hierarchical task planning and motion constraint testing for
+                  dual-arm manipulation." In IROS 2018, pp. 4061–4066.
+              </div>
             </div>
         </section>
 
+
         <section>
+            <p>Addressed problems</p>
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure class="">
-                <img style="width:400px;" src="img/dual-arm-planning/example-symbolic.png">
-                <figcaption>Symbolic reasoning</figcaption>
+                <img style="height:375px;" src="img/dual-arm-planning/example-symbolic.png">
+                <img style="height:375px;" src="img/dual-arm-planning/example-geometric.png">
+                <figcaption>Symbolic-geometric reasoning (<strong>O1</strong>)</figcaption>
               </figure>
               <figure class="fragment">
-                <img style="width:400px;" src="img/dual-arm-planning/example-geometric.png">
-                <figcaption>Geometric reasoning</figcaption>
-              </figure>
-              <figure class="fragment">
-                <img style="width:400px;" src="img/dual-arm-planning/example-partial-observability.png">
-                <figcaption>Partial observability</figcaption>
+                <img style="height:375px;" src="img/dual-arm-planning/example-partial-observability.png">
+                <figcaption>Partial observability (<strong>O3</strong>)</figcaption>
               </figure>
             </div>
         </section>
 
         <section>
-            <p>First principle: divide goal into tasks. Each task is in turn solved via a <strong>Hierarchical Task Network (HTN)</strong>:</p>
-            <img class="r-stretch" src="img/dual-arm-planning/htn.png">
+            <p>Literature</p>
+
+            <div class="r-stack">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature1.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature2.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature3.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature4.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature5.svg">
+            </div>
         </section>
 
         <section>
-            <p>Second principle: <strong>handle uncertainty explicitly</strong> and <strong>reshape environment</strong>:</p>
+            <p>Methodology</p>
+
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="">
-                <img style="width:400px;" src="img/dual-arm-planning/dispel-noise.png">
-                <figcaption>Noise-dispelling action</figcaption>
+              <figure style="width:50%;vertical-align:bottom;" class="">
+                <img style="height:150px;" src="img/dual-arm-planning/dispel-noise.png">
+                <img style="height:150px;" src="img/dual-arm-planning/pushing.gif">
+                <figcaption>Information gathering actions and reshaping actions</figcaption>
               </figure>
-              <figure class="fragment">
-                <img style="width:400px;" src="img/dual-arm-planning/pushing.gif">
-                <figcaption>Environment-reshaping action</figcaption>
+              <figure class="fragment" style="width:50%;vertical-align:bottom;">
+                <img style="height:375px;" src="img/dual-arm-planning/htn.png">
+                <figcaption>Task decomposition (HTN)</figcaption>
               </figure>
+
             </div>
+
         </section>
 
         <section>
@@ -441,10 +425,10 @@
         </section>
 
       </div>
-      <div class="frame bottom"></div>
+      <!--<div class="frame bottom"></div>-->
       <div class="frame top"></div>
-      <div class="frame left"></div>
-      <div class="frame right"></div>
+      <!--<div class="frame left"></div>-->
+      <!--<div class="frame right"></div>-->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>

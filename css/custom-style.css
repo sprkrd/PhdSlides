@@ -29,6 +29,20 @@
   /*color: #17ff2e;*/
 /*}*/
 
+.reveal .fragment.fade-in-then-semi-out.visible {
+  opacity: 0.2;
+  visibility: inherit;
+}
+
+.reveal .fragment.fade-in-then-semi-out {
+  visibility: hidden;
+}
+
+.reveal .fragment.fade-in-then-semi-out.visible.current-fragment {
+  opacity: 1;
+  visibility: inherit;
+}
+
 .reveal .fragment.semi-fade-in-out {
   opacity: 0.3;
   visibility: inherit;
@@ -99,6 +113,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 
 div.down-arrow {
 }
@@ -387,6 +402,16 @@ span.nobr {
   z-index: 3;
 }
 
+.reference {
+    font-size: 50%;
+    text-align: left;
+}
+
+.reference > img {
+    height: 2em;
+    position: relative;
+    top: 1em;
+}
 
 
 /********************

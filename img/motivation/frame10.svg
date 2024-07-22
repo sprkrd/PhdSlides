@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="210mm" height="148mm" viewBox="0 0 21000 14800" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+<svg version="1.2" width="280mm" height="157.5mm" viewBox="0 0 28000 15750" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
-   <rect x="0" y="0" width="21000" height="14800"/>
+   <rect x="0" y="0" width="28000" height="15750"/>
   </clipPath>
   <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
-   <rect x="21" y="14" width="20958" height="14771"/>
+   <rect x="28" y="15" width="27944" height="15719"/>
   </clipPath>
  </defs>
  <defs>
@@ -91,30 +91,30 @@
      <g class="Page">
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="6611" y="7149" width="691" height="1444"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 7274,7176 C 7115,7176 6956,7233 6956,7291 L 6956,7754 C 6956,7812 6797,7870 6638,7870 6797,7870 6956,7928 6956,7986 L 6956,8449 C 6956,8507 7115,8565 7274,8565"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 6638,7176 L 6638,7176 Z"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 7274,8565 L 7274,8565 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="9179" y="8449" width="691" height="1444"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 9842,8476 C 9683,8476 9524,8533 9524,8591 L 9524,9054 C 9524,9112 9365,9170 9206,9170 9365,9170 9524,9228 9524,9286 L 9524,9749 C 9524,9807 9683,9865 9842,9865"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 9206,8476 L 9206,8476 Z"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 9842,9865 L 9842,9865 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id4">
-        <rect class="BoundingBox" stroke="none" fill="none" x="12169" y="7150" width="691" height="1444"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 12196,7177 C 12355,7177 12514,7234 12514,7292 L 12514,7755 C 12514,7813 12673,7871 12832,7871 12673,7871 12514,7929 12514,7987 L 12514,8450 C 12514,8508 12355,8566 12196,8566"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 12832,7177 L 12832,7177 Z"/>
-        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 12196,8566 L 12196,8566 Z"/>
+        <rect class="BoundingBox" stroke="none" fill="none" x="17752" y="8450" width="691" height="1444"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 17779,8477 C 17938,8477 18097,8534 18097,8592 L 18097,9055 C 18097,9113 18256,9171 18415,9171 18256,9171 18097,9229 18097,9287 L 18097,9750 C 18097,9808 17938,9866 17779,9866"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 18415,8477 L 18415,8477 Z"/>
+        <path fill="none" stroke="rgb(0,0,0)" stroke-width="53" stroke-linejoin="round" d="M 17779,9866 L 17779,9866 Z"/>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id5">
-        <rect class="BoundingBox" stroke="none" fill="none" x="8027" y="7907" width="3411" height="1940"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="8902" y="8697"><tspan fill="rgb(0,0,0)" stroke="none">Task </tspan></tspan><tspan class="TextPosition" x="8277" y="9519"><tspan fill="rgb(0,0,0)" stroke="none">planning</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="11830" y="9207" width="3411" height="1940"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="734px" font-weight="400"><tspan class="TextPosition" x="12705" y="9997"><tspan fill="rgb(0,0,0)" stroke="none">Task </tspan></tspan><tspan class="TextPosition" x="12080" y="10819"><tspan fill="rgb(0,0,0)" stroke="none">planning</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
        <g id="id6">
-        <rect class="BoundingBox" stroke="none" fill="none" x="6957" y="10248" width="6111" height="3582"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="10822"><tspan fill="rgb(129,212,26)" stroke="none">+predictable/explainable</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="11377"><tspan fill="rgb(129,212,26)" stroke="none">+robust</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="11932"><tspan fill="rgb(129,212,26)" stroke="none">+flexible</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="12487"><tspan fill="rgb(255,0,0)" stroke="none">-several physical world</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="13042"><tspan fill="rgb(255,0,0)" stroke="none"> </tspan><tspan fill="rgb(255,0,0)" stroke="none">challenges</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="7207" y="13597"><tspan fill="rgb(255,0,0)" stroke="none">-high set-up effort</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="10477" y="11548" width="6111" height="3582"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="12122"><tspan fill="rgb(50,205,50)" stroke="none">+predictable/explainable</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="12677"><tspan fill="rgb(50,205,50)" stroke="none">+robust</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="13232"><tspan fill="rgb(50,205,50)" stroke="none">+flexible</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="13787"><tspan fill="rgb(255,0,0)" stroke="none">-several physical world</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="14342"><tspan fill="rgb(255,0,0)" stroke="none"> </tspan><tspan fill="rgb(255,0,0)" stroke="none">challenges</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="10727" y="14897"><tspan fill="rgb(255,0,0)" stroke="none">-high set-up effort</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.2" width="210mm" height="148mm" viewBox="0 0 21000 14800" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+<svg version="1.2" width="280mm" height="157.5mm" viewBox="0 0 28000 15750" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
  <defs class="ClipPathGroup">
   <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
-   <rect x="0" y="0" width="21000" height="14800"/>
+   <rect x="0" y="0" width="28000" height="15750"/>
   </clipPath>
   <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
-   <rect x="21" y="14" width="20958" height="14771"/>
+   <rect x="28" y="15" width="27944" height="15719"/>
   </clipPath>
  </defs>
  <defs>
@@ -87,8 +87,8 @@
      <g class="Page">
       <g class="com.sun.star.drawing.TextShape">
        <g id="id3">
-        <rect class="BoundingBox" stroke="none" fill="none" x="14990" y="10276" width="5277" height="3316"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="15240" y="10850"><tspan fill="rgb(129,212,26)" stroke="none">+low set-up effort</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="15240" y="11405"><tspan fill="rgb(129,212,26)" stroke="none">+flexible</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="15240" y="11960"><tspan fill="rgb(255,191,0)" stroke="none">+/- maybe not robust</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="15240" y="12515"><tspan fill="rgb(255,0,0)" stroke="none">-unpredictable/</tspan></tspan><tspan class="TextPosition" x="15240" y="13070"><tspan fill="rgb(255,0,0)" stroke="none"> difficult to explain</tspan></tspan></tspan></text>
+        <rect class="BoundingBox" stroke="none" fill="none" x="22542" y="11576" width="5277" height="3316"/>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="22792" y="12150"><tspan fill="rgb(50,205,50)" stroke="none">+low set-up effort</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="22792" y="12705"><tspan fill="rgb(50,205,50)" stroke="none">+flexible</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="22792" y="13260"><tspan fill="rgb(255,140,0)" stroke="none">+/- maybe not robust</tspan></tspan></tspan><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="22792" y="13815"><tspan fill="rgb(255,0,0)" stroke="none">-unpredictable/</tspan></tspan><tspan class="TextPosition" x="22792" y="14370"><tspan fill="rgb(255,0,0)" stroke="none"> difficult to explain</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>
