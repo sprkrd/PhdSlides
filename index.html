@@ -109,77 +109,91 @@
         <section>
             <h2 class="numbered-section">Contributions</h2>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-                <figure style="width:500px;" class="fragment">
-                    <img class="" src="img/contributions/first_part.png">
-                    <figcaption>New planning algorithms</figcaption>
-                </figure>
-
-                <figure style="width:500px;" class="fragment">
-                    <img class="" src="img/contributions/second_part.png">
-                    <figcaption>Learning algorithms</figcaption>
-                </figure>
-            </div>
-
-        </section>
-
-        <section>
             <div class="r-stack">
                 <img class="r-stretch" src="img/contributions/frame1.svg">
                 <img class="fragment r-stretch" src="img/contributions/frame2.svg">
             </div>
+
+            <!--<div class="r-hstack" style="justify-content:space-evenly;">-->
+                <!--<figure style="width:500px;" class="fragment">-->
+                    <!--<img class="" src="img/contributions/first_part.png">-->
+                    <!--<figcaption>New planning algorithms</figcaption>-->
+                <!--</figure>-->
+
+                <!--<figure style="width:500px;" class="fragment">-->
+                    <!--<img class="" src="img/contributions/second_part.png">-->
+                    <!--<figcaption>Learning algorithms</figcaption>-->
+                <!--</figure>-->
+            <!--</div>-->
+
         </section>
+
+        <!--<section>-->
+            <!--<div class="r-stack">-->
+                <!--<img class="r-stretch" src="img/contributions/frame1.svg">-->
+                <!--<img class="fragment r-stretch" src="img/contributions/frame2.svg">-->
+            <!--</div>-->
+        <!--</section>-->
 
         <section>
             <h2 class="numbered-section">Planning and Execution</h2>
-            <div class="r-hstack" style="justify-content:space-evenly;">
-                <figure>
-                    <img class="" src="img/contributions/first_part.png">
-                </figure>
-
-                <figure style="opacity:0.3;">
-                    <img class="" src="img/contributions/second_part.png">
-                </figure>
-            </div>
+            <img class="r-stretch" src="img/contributions/splash1.svg">
         </section>
 
         <section>
             <h3 class="numbered-section">Dual-arm Symbolic-motion Planning</h3>
 
-            <div class="r-vstack" style="justify-content:space-evenly;">
-              <div class="r-hstack spaced-horizontally">
+            <div class="r-hstack">
 
-                <figure style="width:500px;" class="fragment">
-                  <img src="img/dual-arm-planning/game-introduction.gif">
-                  <figcaption>Complex manipulation...</figcaption>
-                </figure>
+                <div style="width:50%">
+                    <img src="img/contributions/splash11.svg">
+                </div>
 
-                <figure style="width:500px;" class="fragment">
-                  <img src="img/dual-arm-planning/picker-and-catcher.png">
-                  <figcaption>... with dual-arm robot set-ups</figcaption>
-                </figure>
-              </div>
-              <div class="reference" style="padding-top: 50px;" >
-                  A. Suárez-Hernández, G. Alenyà, and C. Torras. "Interleaving hierarchical task planning and motion constraint testing for
-                  dual-arm manipulation." In IROS 2018, pp. 4061–4066.
-              </div>
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img width="200" src="img/dual-arm-planning/game-introduction.gif">
+                      <figcaption>Complex manipulation...</figcaption>
+                    </figure>
+
+                    <figure style="">
+                      <img width="200" src="img/dual-arm-planning/picker-and-catcher.png">
+                      <figcaption>... with dual-arm robot set-ups</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+
+            <div class="reference" style="padding-top: 50px;" >
+                A. Suárez-Hernández, G. Alenyà, and C. Torras. "Interleaving hierarchical task planning and motion constraint testing for
+                dual-arm manipulation." In IROS 2018, pp. 4061–4066.
             </div>
         </section>
 
 
         <section>
             <h4>Addressed problems</h4>
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="fragment">
-                <img style="height:375px;" src="img/dual-arm-planning/example-symbolic.png">
-                <img style="height:375px;" src="img/dual-arm-planning/example-geometric.png">
-                <figcaption>Symbolic-geometric reasoning (<strong>O1</strong>)</figcaption>
-              </figure>
-              <figure class="fragment">
-                <img style="height:375px;" src="img/dual-arm-planning/example-partial-observability.png">
-                <figcaption>Partial observability (<strong>O3</strong>)</figcaption>
-              </figure>
+
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="fragment semi-fade-out" data-fragment-index="1">Symbolic-geometric reasoning (<strong>O1</strong>)</li>
+                        <li class="fragment" data-fragment-index="1">Partial observability (<strong>O3</strong>)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                    <figure class="fragment fade-out" data-fragment-index="1">
+                      <img style="height:300px;" src="img/dual-arm-planning/example-symbolic.png">
+                      <img style="height:300px;" src="img/dual-arm-planning/example-geometric.png">
+                    </figure>
+                    <img class="fragment" data-fragment-index="1" style="width:375px;" src="img/dual-arm-planning/example-partial-observability.png">
+                </div>
             </div>
+
         </section>
 
         <section>
@@ -198,13 +212,13 @@
             <h4>Specific contributions</h4>
 
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure style="width:50%;vertical-align:bottom;" class="">
-                <img style="height:150px;" src="img/dual-arm-planning/dispel-noise.png">
-                <img style="height:150px;" src="img/dual-arm-planning/pushing.gif">
+              <figure style="width:40%;vertical-align:bottom;" class="">
+                <img style="width:400px;" src="img/dual-arm-planning/dispel-noise.png">
+                <img style="width:400px;" src="img/dual-arm-planning/pushing.gif">
                 <figcaption>Information gathering actions and reshaping actions</figcaption>
               </figure>
-              <figure class="fragment" style="width:50%;vertical-align:bottom;">
-                <img style="height:375px;" src="img/dual-arm-planning/htn.png">
+              <figure class="fragment" style="width:60%;vertical-align:bottom;">
+                <img style="width:100%;" src="img/dual-arm-planning/htn.png">
                 <figcaption>Task decomposition (HTN)</figcaption>
               </figure>
 
@@ -243,35 +257,58 @@
 
         <section>
             <h3 class="numbered-section">Planning in Face of Stochastic Outcomes</h3>
-            <div class="r-vstack" style="justify-content:space-evenly;">
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/handling-uncertain-outcomes/unscrew.gif">
-                  <img style="width:400px;" src="img/handling-uncertain-outcomes/remove-pcb.gif">
-                  <figcaption>Disassembly use case</figcaption>
-                </figure>
-                <div class="reference" style="padding-top: 50px;" >
-                      A. Suárez-Hernández, C. Torras, and G. Alenyà.
-                      "Practical resolution methods for MDPs in robotics exemplified
-                      with disassembly planning." In IEEE RA-L (2019), pp. 2282–2288.
+
+
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash12.svg">
                 </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img width="200" src="img/handling-uncertain-outcomes/unscrew.gif">
+                      <img width="200" src="img/handling-uncertain-outcomes/remove-pcb.gif">
+                      <figcaption>Disassembly with uncertainty</figcaption>
+                    </figure>
+
+                </div>
+
             </div>
+
+
+            <div class="reference" style="padding-top: 50px;" >
+                <strong>A. Suárez-Hernández</strong>, C. Torras, and G. Alenyà.
+                  "Practical resolution methods for MDPs in robotics exemplified
+                  with disassembly planning." In <strong>IEEE RA-L (2019)</strong>, pp. 2282–2288.
+            </div>
+
         </section>
 
         <section>
             <h4>Addressed problems</h4>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="fragment">
-                <img style="padding-bottom:200px;" src="img/handling-uncertain-outcomes/stochastic-action.png">
-                <img style="height:200px;position:fixed;left:32px;top:290px;" src="img/handling-uncertain-outcomes/successful-action.gif">
-                <img style="height:200px;position:fixed;left:400px;top:290px;" src="img/handling-uncertain-outcomes/unsuccessful-action.gif">
-                <figcaption>Stochastic outcomes (<strong>O2</strong>)</figcaption>
-              </figure>
-              <figure class="fragment">
-                <img style="height:375px;" src="img/handling-uncertain-outcomes/device-with-hidden-components.png">
-                <figcaption>Occlusions (<strong>O3</strong>)</figcaption>
-              </figure>
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="fragment semi-fade-out" data-fragment-index="1">Handle uncertain outcomes (<strong>O2</strong>)</li>
+                        <li class="fragment" data-fragment-index="1">Handle partial observability (occlusions) (<strong>O3</strong>)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                    <figure class="fragment fade-out" data-fragment-index="1">
+                      <img style="padding-bottom:200px;" src="img/handling-uncertain-outcomes/stochastic-action.png">
+                      <img style="height:200px;position:fixed;left:620px;top:257px;" src="img/handling-uncertain-outcomes/successful-action.gif">
+                      <img style="height:200px;position:fixed;left:941px;top:257px;" src="img/handling-uncertain-outcomes/unsuccessful-action.gif">
+                    </figure>
+                    <img class="fragment" data-fragment-index="1" style="height:375px;" src="img/handling-uncertain-outcomes/device-with-hidden-components.png">
+                </div>
             </div>
+
         </section>
 
         <section>
@@ -282,6 +319,7 @@
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature2.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature3.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature4.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature5.svg">
             </div>
         </section>
 
@@ -300,7 +338,6 @@
             </div>
 
         </section>
-
 
         <section>
             <h4>More on subtask selection</h4>
@@ -347,7 +384,7 @@
         </section>
 
         <section>
-            <h4>Problems addressed<h4>
+            <h4>Problems addressed</h4>
             <figure class="fragment">
               <img style="width:32%;" src="img/leveraging-simulators/exp1.gif">
               <img style="width:32%;" src="img/leveraging-simulators/exp2.gif">
@@ -399,7 +436,7 @@
         <section>
             <h4>Algorithm visualization (test+target)</h4>
 
-            <video class="r-stretch" loop controls>
+            <video class="r-stretch" controls>
                 <source data-src="video/bandits_w_sim.mp4" type="video/mp4">
             </video>
 
@@ -408,7 +445,7 @@
         <section>
             <h4>Algorithm visualization (only target)</h4>
 
-            <video class="r-stretch" loop controls>
+            <video class="r-stretch" controls>
                 <source data-src="video/bandits_wo_sim.mp4" type="video/mp4">
             </video>
 
@@ -488,7 +525,7 @@
         </section>
 
         <section>
-            <h4>Methodology</h4>
+            <h4>Specific contributions</h4>
 
             <figure>
                 <img class=""src="img/udam/fama.png">
