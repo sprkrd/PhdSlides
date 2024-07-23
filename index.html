@@ -23,7 +23,7 @@
     <div class="reveal">
       <div class="slides">
 
-        <section class="front-page">
+        <section class="front-page" data-state="front-page-state">
           <h3>Ph.D. Dissertation</h3>
           <h1>New Methods for Bridging Symbolic-Geometric Reasoning, Addressing Uncertainty and Action Learning in Task Planning for Robotics</h1>
 
@@ -38,7 +38,7 @@
             </li>
           </ul>
 
-          <p>Directed by</p>
+          <p>Advisors:</p>
 
           <ul class="authors">
               <li>
@@ -104,8 +104,6 @@
                 <img class="r-stretch fragment" src="img/objectives/frame3.svg">
                 <img class="r-stretch fragment" src="img/objectives/frame4.svg">
             </div>
-
-
         </section>
 
         <section>
@@ -170,7 +168,7 @@
 
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure class="fragment">
                 <img style="height:375px;" src="img/dual-arm-planning/example-symbolic.png">
@@ -185,7 +183,7 @@
         </section>
 
         <section>
-            <p>Literature</p>
+            <h4>Literature</h4>
 
             <div class="r-stack">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature1.svg">
@@ -197,7 +195,7 @@
         </section>
 
         <section>
-            <p>Methodology</p>
+            <h4>Specific contributions</h4>
 
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure style="width:50%;vertical-align:bottom;" class="">
@@ -215,10 +213,13 @@
         </section>
 
         <section>
+
+            <h4>Quantitative experiments</h4>
+
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure>
                   <img src="img/dual-arm-planning/results.svg">
-                  <figcaption>Quantitative results (simulation)</figcaption>
+                  <figcaption>Results (simulation)</figcaption>
               </figure>
               <div class="r-vstack fragment">
                 <figure class="">
@@ -234,8 +235,8 @@
         </section>
 
         <section>
-            <p>Qualitative experiment</p>
-            <video id="itm-video" loop controls onloadstart="this.playbackRate = 10;">
+            <h4>Qualitative experiment</h4>
+            <video class="r-stretch" controls onloadstart="this.playbackRate = 10;">
                 <source data-src="http://www.iri.upc.edu/groups/perception/dual_arm_planning/video/itm_demo_real.mp4" type="video/mp4">
             </video>
         </section>
@@ -257,7 +258,7 @@
         </section>
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
 
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure class="fragment">
@@ -274,7 +275,7 @@
         </section>
 
         <section>
-            <p>Literature</p>
+            <h4>Literature</h4>
 
             <div class="r-stack">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature1.svg">
@@ -285,7 +286,8 @@
         </section>
 
         <section>
-            <p>Methodology</p>
+            <h4>Specific contributions</h4>
+
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure style="width:50%;vertical-align:bottom;" class="">
                 <img style="height:400px;" class="r-stretch" src="img/handling-uncertain-outcomes/state.png">
@@ -295,34 +297,40 @@
                 <img style="height:400px;" src="img/handling-uncertain-outcomes/architecture.svg">
                 <figcaption>System architecture</figcaption>
               </figure>
-
             </div>
+
         </section>
 
 
         <section>
-            <p>More on subtask selection</p>
+            <h4>More on subtask selection</h4>
             <img class="r-stretch" src="img/handling-uncertain-outcomes/subtask-selection.png">
         </section>
 
         <section>
-            <p>More on determinization</p>
+            <h4>More on determinization</h4>
             <img class="r-stretch" src="img/handling-uncertain-outcomes/determinization.png">
         </section>
 
         <section>
-            <p>Alpha-Cost Transition Likelihood determinization</p>
+            <h4>Alpha-Cost Transition Likelihood determinization</h4>
+
             <img src="img/handling-uncertain-outcomes/actl.png">
             <img style="width:600px;" src="img/handling-uncertain-outcomes/safety-eagerness.png">
+
         </section>
 
         <section>
-            <p>Results</p>
+            <h4>Results</h4>
+
             <img src="img/handling-uncertain-outcomes/results.png">
+
         </section>
 
         <section>
+
             <h3 class="numbered-section">Leveraging Simulators to Minimize Risk</h3>
+
             <div class="r-vstack" style="justify-content:space-evenly;">
                 <figure class="fragment">
                   <img style="width:400px;" src="img/leveraging-simulators/lever-failure1.gif">
@@ -339,7 +347,7 @@
         </section>
 
         <section>
-            <p>Problems addressed<p>
+            <h4>Problems addressed<h4>
             <figure class="fragment">
               <img style="width:32%;" src="img/leveraging-simulators/exp1.gif">
               <img style="width:32%;" src="img/leveraging-simulators/exp2.gif">
@@ -350,7 +358,7 @@
         </section>
 
         <section>
-            <p>Literature<p>
+            <h4>Literature<h4>
             <div class="r-stack">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature1.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature2.svg">
@@ -360,12 +368,7 @@
         </section>
 
         <section>
-            <p>Multiple Environment NID rules</p>
-            <img style="width:400px;" src="img/leveraging-simulators/menid.svg">
-        </section>
-
-        <section>
-            <p>Methodology</p>
+            <h4>Specific contributions</h4>
 
             <div class="r-hstack spaced-horizontally">
                 <figure style="width:50%" class="fragment">
@@ -385,7 +388,8 @@
         </section>
 
         <section>
-            <p>Model resolution</p>
+            <h4>Model resolution</h4>
+
             <figure>
                 <img src="img/leveraging-simulators/simulation-quality.svg">
                 <figcaption>Effect of model resolution on time and accuracy</figcaption>
@@ -393,22 +397,26 @@
         </section>
 
         <section>
-            <p>Algorithm visualization (test+target)</p>
+            <h4>Algorithm visualization (test+target)</h4>
 
             <video class="r-stretch" loop controls>
                 <source data-src="video/bandits_w_sim.mp4" type="video/mp4">
             </video>
+
         </section>
 
         <section>
-            <p>Algorithm visualization (only target)</p>
+            <h4>Algorithm visualization (only target)</h4>
 
             <video class="r-stretch" loop controls>
                 <source data-src="video/bandits_wo_sim.mp4" type="video/mp4">
             </video>
+
         </section>
 
         <section>
+            <h4>Experiments</h4>
+
             <div class="r-vstack">
                 <figure>
                     <img src="img/leveraging-simulators/results-simulation.png">
@@ -452,7 +460,7 @@
         </section>
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
 
             <div class="r-hstack">
                 <ul>
@@ -469,7 +477,8 @@
         </section>
 
         <section>
-            <p>Literature</p>
+            <h4>Literature</h4>
+
             <div class="r-stack">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature1.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature2.svg">
@@ -479,7 +488,7 @@
         </section>
 
         <section>
-            <p>Methodology</p>
+            <h4>Methodology</h4>
 
             <figure>
                 <img class=""src="img/udam/fama.png">
@@ -488,7 +497,7 @@
         </section>
 
         <section>
-            <p>Results</p>
+            <h4>Results</h4>
 
             <img src="img/udam/results.png">
         </section>
@@ -515,7 +524,7 @@
         </section>
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
 
             <figure>
                  <img style="height:300px;" src="img/inpro/games.png">
@@ -525,7 +534,7 @@
         </section>
 
         <section>
-            <p>Literature</p>
+            <h4>Literature</h4>
 
             <div class="r-stack">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/inpro/literature1.svg">
@@ -536,7 +545,7 @@
         </section>
 
         <section>
-            <p>Methodology</p>
+            <h4>Specific contributions</h4>
             <figure>
                  <img style="height:300px;" src="img/inpro/screen.png">
                  <figcaption>Intuitive programming of Socially Assistive Robots</figcaption>
@@ -545,7 +554,7 @@
         </section>
 
         <section>
-            <p>Hypotheses</p>
+            <h4>Hypotheses</h4>
 
             <ul>
                 <li><strong>H1</strong>: teachers from the minimum feedback group will require more traces to
@@ -555,7 +564,7 @@
         </section>
 
         <section>
-            <p>Results</p>
+            <h4>Results</h4>
 
             <div class="r-hstack">
               <figure style="width:50%;" class="">
@@ -585,7 +594,7 @@
         </section>
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
 
             <ul>
                 <li class="fragment">Real-time STRIPS action learning</li>
@@ -595,13 +604,13 @@
         </section>
 
         <section>
-            <p>Methodology</p>
+            <h4>Specific contributions</h4>
 
             <img style="height:600px;" src="img/oaru/teaser.svg">
         </section>
 
         <section>
- 
+
             <video id="itm-video" loop controls onloadstart="this.playbackRate = 1;">
                 <source data-src="video/teaser-oaru.mp4" type="video/mp4">
             </video>
@@ -609,7 +618,7 @@
         </section>
 
         <section>
-            <p>Results (full observability)</p>
+            <h4>Results (full observability)</h4>
 
             <div class="r-hstack">
               <figure style="width:50%;" class="">
@@ -625,7 +634,7 @@
         </section>
 
         <section>
-            <p>Results (partial observability)</p>
+            <h4>Results (partial observability)</h4>
 
             <div class="r-hstack">
               <figure style="width:50%;" class="">
@@ -656,7 +665,7 @@
         </section>
 
         <section>
-            <p>Addressed problems</p>
+            <h4>Addressed problems</h4>
 
             <ul>
                 <li class="fragment">Learn more complex exercises</li>
@@ -666,8 +675,7 @@
         </section>
 
         <section>
-            <p>Methodology</p>
-
+            <h4>Specific contribution</h4>
 
             <div class="r-stack">
                 <img class="r-stretch" src="img/inpro2/method1_frame1.svg">
@@ -685,6 +693,8 @@
         </section>
 
         <section>
+            <h4>Prompting criterion</h4>
+
             <div class="r-stack">
                 <img class="r-stretch" src="img/inpro2/method2_frame1.svg">
                 <img class="r-stretch fragment" src="img/inpro2/method2_frame2.svg">
@@ -698,20 +708,20 @@
         </section>
 
         <section>
-            <p>Quantitative results</p>
+            <h4>Quantitative results</h4>
 
             <img class="r-stretch" src="img/inpro2/results.svg">
         </section>
 
         <section>
-            <p>Qualitative results</p>
+            <h4>Qualitative results</h4>
 
             <img style="height: 300px;" src="img/inpro2/aoa.png">
             <img style="height: 300px;" src="img/inpro2/igc.png">
         </section>
 
         <section>
-            <h2 class="numbered-section">Take-aways</h2>
+            <h2 class="numbered-section">Conclusions</h2>
 
             <ul>
                 <li class="fragment">Broad set of topics</li>
@@ -732,6 +742,10 @@
       <div class="frame top"></div>
       <!--<div class="frame left"></div>-->
       <!--<div class="frame right"></div>-->
+      <div class="logos">
+          <img src="assets/logos/IRI_logo.svg" height="50px"/>
+          <img src="assets/logos/UPC_logo.svg" height="50px"/>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>

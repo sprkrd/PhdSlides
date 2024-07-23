@@ -119,6 +119,21 @@
   align-items: center;
 }
 
+.front-page-state > .reveal .logos
+{
+    display: none;
+}
+
+.logos
+{
+    display: visible;
+}
+
+.logos > img
+{
+    height: 25px;
+    padding: 5px;
+}
 
 div.down-arrow {
 }
