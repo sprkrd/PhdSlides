@@ -151,7 +151,7 @@
             <div class="r-vstack" style="justify-content:space-evenly;">
               <div class="r-hstack spaced-horizontally">
 
-                <figure style="width:500px;">
+                <figure style="width:500px;" class="fragment">
                   <img src="img/dual-arm-planning/game-introduction.gif">
                   <figcaption>Complex manipulation...</figcaption>
                 </figure>
@@ -172,7 +172,7 @@
         <section>
             <p>Addressed problems</p>
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure class="">
+              <figure class="fragment">
                 <img style="height:375px;" src="img/dual-arm-planning/example-symbolic.png">
                 <img style="height:375px;" src="img/dual-arm-planning/example-geometric.png">
                 <figcaption>Symbolic-geometric reasoning (<strong>O1</strong>)</figcaption>
@@ -217,71 +217,96 @@
         <section>
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure>
-                  <img src="img/dual-arm-planning/quantitative-results.png">
+                  <img src="img/dual-arm-planning/results.svg">
                   <figcaption>Quantitative results (simulation)</figcaption>
               </figure>
-              <div class="r-vstack">
-                <figure class="fragment">
-                  <img style="width:300px;" src="img/dual-arm-planning/algorithm-A-scenario-a.gif">
-                  <figcaption>Algorithm A in scenario (a)</figcaption>
+              <div class="r-vstack fragment">
+                <figure class="">
+                  <img style="height:240px;" src="img/dual-arm-planning/algorithm-A-scenario-a.gif">
+                  <figcaption>Algorithm A in (a)</figcaption>
                 </figure>
-                <figure class="fragment">
-                  <img style="width:300px;" src="img/dual-arm-planning/algorithm-F-scenario-c.gif">
-                  <figcaption>Algorithm F in scenario (c)</figcaption>
+                <figure class="">
+                  <img style="height:240px;" src="img/dual-arm-planning/algorithm-F-scenario-c.gif">
+                  <figcaption>Algorithm F in (c)</figcaption>
                 </figure>
               </div>
             </div>
         </section>
 
         <section>
-            <figure>
-                <video id="itm-video" loop controls onloadstart="this.playbackRate = 10;">
-                    <source data-src="http://www.iri.upc.edu/groups/perception/dual_arm_planning/video/itm_demo_real.mp4" type="video/mp4">
-                </video>
-                <figcaption>Qualitative experiment</figcaption>
-            </figure>
+            <p>Qualitative experiment</p>
+            <video id="itm-video" loop controls onloadstart="this.playbackRate = 10;">
+                <source data-src="http://www.iri.upc.edu/groups/perception/dual_arm_planning/video/itm_demo_real.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section>
             <h3 class="numbered-section">Planning in Face of Stochastic Outcomes</h3>
+            <div class="r-vstack" style="justify-content:space-evenly;">
+                <figure class="fragment">
+                  <img style="width:400px;" src="img/handling-uncertain-outcomes/unscrew.gif">
+                  <img style="width:400px;" src="img/handling-uncertain-outcomes/remove-pcb.gif">
+                  <figcaption>Disassembly use case</figcaption>
+                </figure>
+                <div class="reference" style="padding-top: 50px;" >
+                      A. Suárez-Hernández, C. Torras, and G. Alenyà.
+                      "Practical resolution methods for MDPs in robotics exemplified
+                      with disassembly planning." In IEEE RA-L (2019), pp. 2282–2288.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <p>Addressed problems</p>
+
             <div class="r-hstack" style="justify-content:space-evenly;">
-              <div>
-                <p>We are concerned with tasks...</p>
-                <ul>
-                    <li class="fragment">... that require reasoning with action stochasticity (<strong>O2</strong>),</li>
-                    <li class="fragment">where part of the state may be hidden (<strong>O3</strong>),</li>
-                    <li class="fragment">and where classical algorithms are computationlly expensive</li>
-                </ul>
-              </div>
-            <figure class="fragment">
-              <img style="width:200px;" src="img/handling-uncertain-outcomes/unscrew.gif">
-              <img style="width:200px;" src="img/handling-uncertain-outcomes/remove-pcb.gif">
-              <figcaption>Disassembly use case</figcaption>
-            </figure>
+              <figure class="fragment">
+                <img style="padding-bottom:200px;" src="img/handling-uncertain-outcomes/stochastic-action.png">
+                <img style="height:200px;position:fixed;left:32px;top:290px;" src="img/handling-uncertain-outcomes/successful-action.gif">
+                <img style="height:200px;position:fixed;left:400px;top:290px;" src="img/handling-uncertain-outcomes/unsuccessful-action.gif">
+                <figcaption>Stochastic outcomes (<strong>O2</strong>)</figcaption>
+              </figure>
+              <figure class="fragment">
+                <img style="height:375px;" src="img/handling-uncertain-outcomes/device-with-hidden-components.png">
+                <figcaption>Occlusions (<strong>O3</strong>)</figcaption>
+              </figure>
             </div>
         </section>
 
         <section>
-            <p>State represented as (P)PDDL objects and predicates:</p>
-            <img class="r-stretch" src="img/handling-uncertain-outcomes/state.png">
-        </section>
+            <p>Literature</p>
 
-        <section>
-            <div style="position:relative; top:-100px;">
-            <p>Stochastic actions (MDP representation)</p>
-            <img style="" src="img/handling-uncertain-outcomes/stochastic-action.png">
-            <img style="height:200px;position:fixed;left:184px;top:204px;" src="img/handling-uncertain-outcomes/successful-action.gif">
-            <img style="height:200px;position:fixed;left:807px;top:204px;" src="img/handling-uncertain-outcomes/unsuccessful-action.gif">
+            <div class="r-stack">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature1.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature2.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature3.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature4.svg">
             </div>
         </section>
 
         <section>
-            <p>First principle: simplify task (subtask selection)</p>
+            <p>Methodology</p>
+            <div class="r-hstack" style="justify-content:space-evenly;">
+              <figure style="width:50%;vertical-align:bottom;" class="">
+                <img style="height:400px;" class="r-stretch" src="img/handling-uncertain-outcomes/state.png">
+                <figcaption>State as PPDDL predicates and objects</figcaption>
+              </figure>
+              <figure class="fragment" style="width:50%;vertical-align:bottom;">
+                <img style="height:400px;" src="img/handling-uncertain-outcomes/architecture.svg">
+                <figcaption>System architecture</figcaption>
+              </figure>
+
+            </div>
+        </section>
+
+
+        <section>
+            <p>More on subtask selection</p>
             <img class="r-stretch" src="img/handling-uncertain-outcomes/subtask-selection.png">
         </section>
 
         <section>
-            <p>Second principle: determinization</p>
+            <p>More on determinization</p>
             <img class="r-stretch" src="img/handling-uncertain-outcomes/determinization.png">
         </section>
 
@@ -298,83 +323,89 @@
 
         <section>
             <h3 class="numbered-section">Leveraging Simulators to Minimize Risk</h3>
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <div>
-                <p>We are concerned with...</p>
-                <ul>
-                    <li class="fragment">... leveraging two environments (learning and target) for safe execution and learning (<strong>O2,O4</strong>).</li>
-                    <li class="fragment">... disambiguate between similar actions with physical simulators (<strong>O1</strong>).</li>
-                </ul>
-              </div>
-            <figure class="fragment">
-              <img style="width:400px;" src="img/leveraging-simulators/lever-failure1.gif">
-              <img style="width:400px;" src="img/leveraging-simulators/lever-failure2.gif">
-              <figcaption>Examples of failed lever actions</figcaption>
-            </figure>
-            </div>
-        </section>
-
-        <section>
-            <p>Proposed architecture</p>
-
-            <img style="width:400px;" src="img/leveraging-simulators/architecture.png">
-            <img style="position:fixed;width:200px;top:450px;left:220px;" src="img/leveraging-simulators/lever-success-sim.gif">
-            <img style="position:fixed;width:200px;top:450px;left:810px;" src="img/leveraging-simulators/lever-success.gif">
-        </section>
-
-        <section>
-            <p>Multiple Environment Noisy Indeterministic Deictic (MENID) rules</p>
-
-            <img src="img/leveraging-simulators/MENID_rules.png">
-        </section>
-
-        <section>
-            <p>Estimation of categorical distributions</p>
-            <ul>
-                <li class="">$ ^ix_i $: Number of times event $ j $ has occurred in environment $ i $</li>
-                <li class="fragment">$ N_i $: Total number of events</li>
-                <li class="fragment">If simulation (environment 2) reflects reality (environment 1) perfectly:$$ ^1p_j \approx \frac{^1x_j + ^2x_j}{N_1 + N_2} $$</li>
-            </ul>
-        </section>
-
-        <section>
-            <ul>
-                <li class="">However, that isn't generally the case. We propose:$$^1p_j \approx \frac{^1x_j + \frac{m}{\sqrt{1+N_1}} ^2x_j}{N_1 + \frac{m}{\sqrt{1 + N_1}} N_2}$$</li>
-                <figure>
-                    <img src="img/leveraging-simulators/sample.png">
-                    <figcaption>Approximation of the estimation error based on sample size</figcaption>
+            <div class="r-vstack" style="justify-content:space-evenly;">
+                <figure class="fragment">
+                  <img style="width:400px;" src="img/leveraging-simulators/lever-failure1.gif">
+                  <img style="width:400px;" src="img/leveraging-simulators/lever-failure2.gif">
+                  <figcaption>How can a physical simulator help reduce failed executions?</figcaption>
                 </figure>
-            </ul>
-        </section>
-
-        <section>
-            <p>Algorithm overview</p>
-
-            <p>Video here</p>
-        </section>
-
-        <section>
-            <p>Influence of model resolution</p>
-            <div class="r-hstack">
-                <div class="r-vstack" style="">
-                    <figure>
-                        <img style="width:200px;" src="img/leveraging-simulators/exp1.gif">
-                        <figcaption>Lever action</figcaption>
-                    </figure>
-                    <figure>
-                        <img style="width:200px;" src="img/leveraging-simulators/exp2.gif">
-                        <figcaption>Shake action</figcaption>
-                    </figure>
-                    <figure>
-                        <img style="width:200px;" src="img/leveraging-simulators/exp3.gif">
-                        <figcaption>Suction action</figcaption>
-                    </figure>
+                <div class="reference" style="padding-top: 100px;" >
+                      A. Suárez-Hernández, T. Gaugry, J. Segovia-Aguas,
+                      A. Bernardin, C. Torras, M. Marchal, and G. Alenyà.
+                      "Leveraging Multiple Environments for Learning and Decision Making:
+                      a Dismantling Use Case.” In: IEEE/RSJ IROS. 2020, pp. 6902–6908.
                 </div>
-                <figure>
-                    <img src="img/leveraging-simulators/model-resolution-plot.png">
-                    <figcaption>Effect of model resolution on<br>time and accuracy</figcaption>
-                </figure>
             </div>
+        </section>
+
+        <section>
+            <p>Problems addressed<p>
+            <figure class="fragment">
+              <img style="width:32%;" src="img/leveraging-simulators/exp1.gif">
+              <img style="width:32%;" src="img/leveraging-simulators/exp2.gif">
+              <img style="width:32%;" src="img/leveraging-simulators/exp3.gif">
+              <figcaption>Unknown outcome probabilities (<strong>O2, O4</strong>),
+              no symbolic difference between actions (<strong>O1</strong>)</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <p>Literature<p>
+            <div class="r-stack">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature1.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature2.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature3.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature4.svg">
+            </div>
+        </section>
+
+        <section>
+            <p>Multiple Environment NID rules</p>
+            <img style="width:400px;" src="img/leveraging-simulators/menid.svg">
+        </section>
+
+        <section>
+            <p>Methodology</p>
+
+            <div class="r-hstack spaced-horizontally">
+                <figure style="width:50%" class="fragment">
+                    <img src="img/leveraging-simulators/menid.svg">
+                    <figcaption>Multiple Environment NID (MENID) rules</figcaption>
+                </figure>
+
+                <figure style="width:50%;" class="fragment">
+                    <img style="width:50%;" src="img/leveraging-simulators/architecture.png">
+                    <img style="position:fixed;width:100px;top:405px;left:776px;" src="img/leveraging-simulators/lever-success-sim.gif">
+                    <img style="position:fixed;width:100px;top:405px;left:932px;" src="img/leveraging-simulators/lever-success.gif">
+                    <figcaption style="padding-top:100px">System architecture</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+        <section>
+            <p>Model resolution</p>
+            <figure>
+                <img src="img/leveraging-simulators/simulation-quality.svg">
+                <figcaption>Effect of model resolution on time and accuracy</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <p>Algorithm visualization (test+target)</p>
+
+            <video class="r-stretch" loop controls>
+                <source data-src="video/bandits_w_sim.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section>
+            <p>Algorithm visualization (only target)</p>
+
+            <video class="r-stretch" loop controls>
+                <source data-src="video/bandits_wo_sim.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section>
@@ -383,7 +414,7 @@
                     <img src="img/leveraging-simulators/results-simulation.png">
                     <figcaption>Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
                 </figure>
-                <figure>
+                <figure style="padding-top:50px;">
                     <img src="img/leveraging-simulators/results-robot.png">
                     <figcaption>Results simulation $ \rightarrow $ real robot</figcaption>
                 </figure>
@@ -406,22 +437,294 @@
 
         <section>
             <h3 class="numbered-section">STRIPS Action Discovery</h3>
+
+            <figure>
+                 <img src="img/udam/udam-teaser.png">
+                 <figcaption>Example STRIPS domain (<em>visit all</em>)</figcaption>
+            </figure>
+
+            <div class="reference" style="padding-top: 100px;">
+                A. Suárez-Hernández, J. Segovia-Aguas, C. Torras, and
+                G. Alenyà. “STRIPS action discovery.” In: arXiv preprint arXiv:
+                2001.11457 (2020). Presented in the 1st Workshop on Generalization in
+                Planning at the 2020 AAAI conference.
+            </div>
+        </section>
+
+        <section>
+            <p>Addressed problems</p>
+
+            <div class="r-hstack">
+                <ul>
+                    <li>Learning STRIPS state traces (<strong>O4</strong>)</li>
+                    <li class="fragment" data-fragment-index="1"><strong>Minimal information</strong></li>
+                </ul>
+
+                <div class="r-stack">
+                    <img class=""src="img/udam/traces1.svg">
+                    <img class="fragment" data-fragment-index="1" src="img/udam/traces2.svg">
+                    <img class="fragment"src="img/udam/traces3.svg">
+                </div> 
+            </div>
+        </section>
+
+        <section>
+            <p>Literature</p>
+            <div class="r-stack">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature1.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature2.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature3.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/udam/literature4.svg">
+            </div>
+        </section>
+
+        <section>
+            <p>Methodology</p>
+
+            <figure>
+                <img class=""src="img/udam/fama.png">
+                <figcaption>Learning when action signatures are known (FAMA-like)</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <p>Results</p>
+
+            <img src="img/udam/results.png">
         </section>
 
         <section>
             <h3 class="numbered-section">INtuitive PROgramming</h3>
+
+            <figure>
+                 <img style="height:300px;" src="img/inpro/aleks.png">
+                 <figcaption>Learn cognitive exercises from demonstration</figcaption>
+            </figure>
+
+            <div class="reference" style="padding-top: 100px;">
+                A. Andriella, A. Suárez-Hernández, J. Segovia-Aguas, 
+                C. Torras, and G, Alenya. "Natural teaching of robot-assisted
+                rearranging exercises for cognitive training." In ICSR 2019, pp. 611–621
+            </div>
+            <div class="reference" style="padding-top: 10px;">
+                A. Suárez-Hernández, A. Andriella, A. Taranović,
+                J. Segovia-Aguas, C. Torras, and G. Alenyà. "Automatic
+                learning of cognitive exercises for socially assistive robotics."
+                In RO-MAN 2021, pp. 139–146
+            </div>
+        </section>
+
+        <section>
+            <p>Addressed problems</p>
+
+            <figure>
+                 <img style="height:300px;" src="img/inpro/games.png">
+                 <figcaption>Intuitive programming of Socially Assistive Robots</figcaption>
+            </figure>
+            
+        </section>
+
+        <section>
+            <p>Literature</p>
+
+            <div class="r-stack">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/inpro/literature1.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/inpro/literature2.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/inpro/literature3.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/inpro/literature4.svg">
+            </div>
+        </section>
+
+        <section>
+            <p>Methodology</p>
+            <figure>
+                 <img style="height:300px;" src="img/inpro/screen.png">
+                 <figcaption>Intuitive programming of Socially Assistive Robots</figcaption>
+            </figure>
+
+        </section>
+
+        <section>
+            <p>Hypotheses</p>
+
+            <ul>
+                <li><strong>H1</strong>: teachers from the minimum feedback group will require more traces to
+                    complete the exercises</li>
+                <li><strong>H2</strong>: more teachers in the full feedback group will teach all exercise rules</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Results</p>
+
+            <div class="r-hstack">
+              <figure style="width:50%;" class="">
+                <img style="height:150px;" src="img/inpro/table.png">
+                <figcaption>User study results (tabular)</figcaption>
+              </figure>
+              <figure class="fragment" style="width:50%;vertical-align:bottom;">
+                <img style="height:370px;" src="img/inpro/plot.png">
+                <figcaption>Error vs proportion of participants</figcaption>
+              </figure>
+            </div>
         </section>
 
         <section>
             <h3 class="numbered-section">Online Action Recognition through Unification</h3>
+
+            <figure>
+                 <img style="height:300px;" src="img/oaru/sokoban_animation.gif">
+            </figure>
+
+
+            <div class="reference" style="padding-top: 100px;">
+                A. Suárez-Hernández, J. Segovia-Aguas, C. Torras, and
+                G. Alenyà. "Online Action Recognition." In: 2021 AAAI Conference,
+                pp. 11981–11989
+            </div>
+        </section>
+
+        <section>
+            <p>Addressed problems</p>
+
+            <ul>
+                <li class="fragment">Real-time STRIPS action learning</li>
+                <li class="fragment">Learning even with Partial Observability</li>
+                <li class="fragment">Few-shot performance</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Methodology</p>
+
+            <img style="height:600px;" src="img/oaru/teaser.svg">
+        </section>
+
+        <section>
+ 
+            <video id="itm-video" loop controls onloadstart="this.playbackRate = 1;">
+                <source data-src="video/teaser-oaru.mp4" type="video/mp4">
+            </video>
+
+        </section>
+
+        <section>
+            <p>Results (full observability)</p>
+
+            <div class="r-hstack">
+              <figure style="width:50%;" class="">
+                <img style="height:300px;" src="img/oaru/results_a.png">
+                <figcaption>Statistics</figcaption>
+              </figure>
+              <figure class="fragment" style="width:50%;vertical-align:bottom;">
+                <img style="height:370px;" src="img/oaru/full_obs_updates-crop.svg">
+                <figcaption>#Updates vs #steps</figcaption>
+              </figure>
+            </div>
+
+        </section>
+
+        <section>
+            <p>Results (partial observability)</p>
+
+            <div class="r-hstack">
+              <figure style="width:50%;" class="">
+                <img style="height:300px;" src="img/oaru/results_b.png">
+                <figcaption>Statistics</figcaption>
+              </figure>
+              <figure class="fragment" style="width:50%;vertical-align:bottom;">
+                <img style="height:370px;" src="img/oaru/partial_obs_updates-crop.svg">
+                <figcaption>#Updates vs #steps</figcaption>
+              </figure>
+            </div>
         </section>
 
         <section>
             <h3 class="numbered-section">INtuitive PROgramming 2</h3>
+
+            <figure>
+                 <img style="height:300px;" src="img/inpro2/teaser.png">
+            </figure>
+            
+
+            <div class="reference" style="padding-top: 100px;">
+                A. Suárez-Hernández, A. Andriella, C. Torras,
+                and G. Alenyà. "User Interactions and Negative Examples
+                to Improve the Learning of Semantic Rules in a Cognitive
+                Exercise Scenario." In IROS 2023, pp. 7953–7960.
+            </div>
+        </section>
+
+        <section>
+            <p>Addressed problems</p>
+
+            <ul>
+                <li class="fragment">Learn more complex exercises</li>
+                <li class="fragment">Until now: robot hasn't been very proactive</li>
+                <li class="fragment">Learn goals?</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Methodology</p>
+
+
+            <div class="r-stack">
+                <img class="r-stretch" src="img/inpro2/method1_frame1.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame2.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame3.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame4.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame5.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame6.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame7.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame8.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame9.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method1_frame10.svg">
+            </div>
+
+        </section>
+
+        <section>
+            <div class="r-stack">
+                <img class="r-stretch" src="img/inpro2/method2_frame1.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame2.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame3.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame4.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame5.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame6.svg">
+                <img class="r-stretch fragment" src="img/inpro2/method2_frame7.svg">
+            </div>
+
+        </section>
+
+        <section>
+            <p>Quantitative results</p>
+
+            <img class="r-stretch" src="img/inpro2/results.svg">
+        </section>
+
+        <section>
+            <p>Qualitative results</p>
+
+            <img style="height: 300px;" src="img/inpro2/aoa.png">
+            <img style="height: 300px;" src="img/inpro2/igc.png">
         </section>
 
         <section>
             <h2 class="numbered-section">Take-aways</h2>
+
+            <ul>
+                <li class="fragment">Broad set of topics</li>
+                <li class="fragment">Key tools:
+                    <ul>
+                        <li class="fragment">Simplification</li>
+                        <li class="fragment">Beyond-symbolic reasoning</li>
+                        <li class="fragment">Hands-off learning</li>
+                    </ul>
+                </li>
+                <li class="fragment">Many more challenges! Multi-agent, cooperative, etc.</li>
+            </ul>
+
         </section>
 
       </div>

@@ -3,6 +3,11 @@
   --slide-frame-size: 2vmin;
 }
 
+@font-face {
+  font-family: Hattinand;
+  src: url(../assets/fonts/Hattinand.otf);
+}
+
 .make-it-pop {
   filter: drop-shadow(0 0 10px purple);
 }
