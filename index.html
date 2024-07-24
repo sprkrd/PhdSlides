@@ -137,7 +137,13 @@
 
         <section>
             <h2 class="numbered-section">Planning and Execution</h2>
-            <img class="r-stretch" src="img/contributions/splash1.svg">
+            <div class="r-stack">
+                <img class="r-stretch" src="img/contributions/splash1.svg">
+                <figure class="fragment" style="padding:10px;position:fixed;left:690px;top:120px;background-color:white;border: black dashed">
+                    <img style="height:500px;" src="img/contributions/projects1.png">
+                    <figcaption>Manipulation use cases</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section>
@@ -165,8 +171,8 @@
 
 
             <div class="reference" style="padding-top: 50px;" >
-                A. Suárez-Hernández, G. Alenyà, and C. Torras. "Interleaving hierarchical task planning and motion constraint testing for
-                dual-arm manipulation." In IROS 2018, pp. 4061–4066.
+                <strong>A. Suárez-Hernández</strong>, G. Alenyà, and C. Torras. "Interleaving hierarchical task planning and motion constraint testing for
+                dual-arm manipulation." In <strong>IEEE/RSJ IROS 2018</strong>, pp. 4061–4066.
             </div>
         </section>
 
@@ -323,38 +329,46 @@
             </div>
         </section>
 
-        <section>
+        <section data-auto-animate>
             <h4>Specific contributions</h4>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure style="width:50%;vertical-align:bottom;" class="">
-                <img style="height:400px;" class="r-stretch" src="img/handling-uncertain-outcomes/state.png">
-                <figcaption>State as PPDDL predicates and objects</figcaption>
-              </figure>
-              <figure class="fragment" style="width:50%;vertical-align:bottom;">
-                <img style="height:400px;" src="img/handling-uncertain-outcomes/architecture.svg">
-                <figcaption>System architecture</figcaption>
-              </figure>
+            <div style="width:100%;height:700px;position:absolute">
+            <img style="width:500px;" src="img/handling-uncertain-outcomes/architecture.png">
             </div>
 
+            <!--<div class="r-hstack" style="justify-content:space-evenly;">-->
+              <!--<figure class="fragment" style="width:50%;vertical-align:bottom;">-->
+                <!--<img style="height:400px;" src="img/handling-uncertain-outcomes/architecture.svg">-->
+                <!--<figcaption>System architecture</figcaption>-->
+              <!--</figure>-->
+              <!--<figure style="width:50%;vertical-align:bottom;" class="">-->
+                <!--<img class="fragment" src="img/handling-uncertain-outcomes/subtask-selection.png">-->
+              <!--</figure>-->
+            <!--</div>-->
+
         </section>
 
-        <section>
-            <h4>More on subtask selection</h4>
-            <img class="r-stretch" src="img/handling-uncertain-outcomes/subtask-selection.png">
+        <section data-auto-animate>
+            <h4>Specific contributions</h4>
+
+            <div style="width:100%;height:700px;position:absolute">
+            <img style="height:200px;max-height:none;position:absolute;top:0px;left:0px;" src="img/handling-uncertain-outcomes/architecture.png">
+            <div class="fragment" data-id="box" data-fragment-index="1" style="border:solid red;width:120px;height:30px;position:absolute;top:69px;left:44px;"></div>
+            <div class="r-stack">
+                <img class="fragment fade-in-then-out" style="width:700px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="1" src="img/handling-uncertain-outcomes/subtask-selection-simple.svg">
+                <img class="fragment" style="width:800px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="2" src="img/handling-uncertain-outcomes/subtask-selection.svg">
+            </div>
+            </div>
         </section>
 
-        <section>
-            <h4>More on determinization</h4>
-            <img class="r-stretch" src="img/handling-uncertain-outcomes/determinization.png">
-        </section>
+        <section data-auto-animate>
+            <h4>Specific contributions</h4>
 
-        <section>
-            <h4>Alpha-Cost Transition Likelihood determinization</h4>
-
-            <img src="img/handling-uncertain-outcomes/actl.png">
-            <img style="width:600px;" src="img/handling-uncertain-outcomes/safety-eagerness.png">
-
+            <div style="width:100%;height:700px;position:absolute">
+            <img style="height:200px;max-height:none;position:absolute;top:0px;left:0px;" src="img/handling-uncertain-outcomes/architecture.png">
+            <div data-id="box" style="border:solid red;width:120px;height:30px;position:absolute;top:99px;left:44px;"></div>
+            <img class="" style="width:800px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="1" src="img/handling-uncertain-outcomes/determinization.svg">
+            </div>
         </section>
 
         <section>
@@ -368,30 +382,63 @@
 
             <h3 class="numbered-section">Leveraging Simulators to Minimize Risk</h3>
 
-            <div class="r-vstack" style="justify-content:space-evenly;">
-                <figure class="fragment">
-                  <img style="width:400px;" src="img/leveraging-simulators/lever-failure1.gif">
-                  <img style="width:400px;" src="img/leveraging-simulators/lever-failure2.gif">
-                  <figcaption>How can a physical simulator help reduce failed executions?</figcaption>
-                </figure>
-                <div class="reference" style="padding-top: 100px;" >
-                      A. Suárez-Hernández, T. Gaugry, J. Segovia-Aguas,
-                      A. Bernardin, C. Torras, M. Marchal, and G. Alenyà.
-                      "Leveraging Multiple Environments for Learning and Decision Making:
-                      a Dismantling Use Case.” In: IEEE/RSJ IROS. 2020, pp. 6902–6908.
+
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash13.svg">
                 </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img width="300" src="img/leveraging-simulators/lever-failure1.gif">
+                      <img width="300" src="img/leveraging-simulators/lever-failure2.gif">
+                      <figcaption>How to anticipate failures?</figcaption>
+                    </figure>
+
+                </div>
+
             </div>
+
+
+            <div class="reference" style="padding-top: 50px;" >
+                <strong>A. Suárez-Hernández</strong>, T. Gaugry, J. Segovia-Aguas,
+                  A. Bernardin, C. Torras, M. Marchal, and G. Alenyà.
+                  "Leveraging Multiple Environments for Learning and Decision Making:
+                  a Dismantling Use Case.” In: <strong>IEEE/RSJ IROS 2020</strong>, pp. 6902–6908.
+            </div>
+
         </section>
 
         <section>
             <h4>Problems addressed</h4>
-            <figure class="fragment">
-              <img style="width:32%;" src="img/leveraging-simulators/exp1.gif">
-              <img style="width:32%;" src="img/leveraging-simulators/exp2.gif">
-              <img style="width:32%;" src="img/leveraging-simulators/exp3.gif">
-              <figcaption>Unknown outcome probabilities (<strong>O2, O4</strong>),
-              no symbolic difference between actions (<strong>O1</strong>)</figcaption>
-            </figure>
+
+
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="fragment semi-fade-out" data-fragment-index="1">Unknown frequency of outcomes (<strong>O2</strong>)</li>
+                        <li class="fragment" data-fragment-index="1">Distinguish among actions? (<strong>O1</strong>)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                    <figure class="fragment fade-out" data-fragment-index="1">
+                        <img style="width:40%;" src="img/leveraging-simulators/exp1.gif">
+                        <img style="width:40%;" src="img/leveraging-simulators/exp2.gif">
+                        <img style="width:40%;" src="img/leveraging-simulators/exp3.gif">
+                    </figure>
+                    <figure class="fragment" data-fragment-index="1">
+                        <img style="width:75%" src="img/leveraging-simulators/lever-success.gif">
+                        <img style="width:75%" src="img/leveraging-simulators/lever-success2.gif">
+                    </figure>
+                </div>
+            </div>
+
+
         </section>
 
         <section>
@@ -401,6 +448,7 @@
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature2.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature3.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature4.svg">
+                <img class="r-stretch fragment fade-in-then-semi-out" src="img/leveraging-simulators/literature5.svg">
             </div>
         </section>
 
@@ -469,30 +517,43 @@
         <section>
             <h2 class="numbered-section">Learning Planning Operators</h2>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-                <figure style="opacity:0.3;">
-                    <img class="" src="img/contributions/first_part.png">
-                </figure>
-
-                <figure style="">
-                    <img class="" src="img/contributions/second_part.png">
+            <div class="r-stack">
+                <img class="r-stretch" src="img/contributions/splash2.svg">
+                <figure class="fragment" style="padding:10px;position:fixed;left:0px;top:120px;background-color:white;border: black dashed">
+                    <img style="height:500px;" src="img/contributions/projects2.png">
+                    <figcaption>Intuitive programming of SAR</figcaption>
                 </figure>
             </div>
+
+
+            <!--<img class="r-stretch" src="img/contributions/splash2.svg">-->
+
         </section>
 
         <section>
             <h3 class="numbered-section">STRIPS Action Discovery</h3>
 
-            <figure>
-                 <img src="img/udam/udam-teaser.png">
-                 <figcaption>Example STRIPS domain (<em>visit all</em>)</figcaption>
-            </figure>
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash24.svg">
+                </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img style="width:90%;" src="img/udam/udam-teaser.png">
+                      <figcaption>Example STRIPS action for visit-all domain</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
 
             <div class="reference" style="padding-top: 100px;">
-                A. Suárez-Hernández, J. Segovia-Aguas, C. Torras, and
+                <strong>A. Suárez-Hernández</strong>, J. Segovia-Aguas, C. Torras, and
                 G. Alenyà. “STRIPS action discovery.” In: arXiv preprint arXiv:
-                2001.11457 (2020). Presented in the 1st Workshop on Generalization in
-                Planning at the 2020 AAAI conference.
+                2001.11457 (2020). <strong>Presented in the 1st Workshop on Generalization in
+                Planning at the 2020 AAAI conference</strong>.
             </div>
         </section>
 
@@ -542,21 +603,32 @@
         <section>
             <h3 class="numbered-section">INtuitive PROgramming</h3>
 
-            <figure>
-                 <img style="height:300px;" src="img/inpro/aleks.png">
-                 <figcaption>Learn cognitive exercises from demonstration</figcaption>
-            </figure>
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash25.svg">
+                </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img style="width:60%;" src="img/inpro/aleks.png">
+                      <figcaption>A teacher demonstrating a cognitive exercise</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
 
             <div class="reference" style="padding-top: 100px;">
-                A. Andriella, A. Suárez-Hernández, J. Segovia-Aguas, 
+                A. Andriella, <strong>A. Suárez-Hernández</strong>, J. Segovia-Aguas, 
                 C. Torras, and G, Alenya. "Natural teaching of robot-assisted
-                rearranging exercises for cognitive training." In ICSR 2019, pp. 611–621
+                rearranging exercises for cognitive training." In <strong>ICSR 2019</strong>, pp. 611–621
             </div>
             <div class="reference" style="padding-top: 10px;">
-                A. Suárez-Hernández, A. Andriella, A. Taranović,
+                <strong>A. Suárez-Hernández</strong>, A. Andriella, A. Taranović,
                 J. Segovia-Aguas, C. Torras, and G. Alenyà. "Automatic
                 learning of cognitive exercises for socially assistive robotics."
-                In RO-MAN 2021, pp. 139–146
+                In <strong>RO-MAN 2021</strong>, pp. 139–146
             </div>
         </section>
 
@@ -618,14 +690,26 @@
         <section>
             <h3 class="numbered-section">Online Action Recognition through Unification</h3>
 
-            <figure>
-                 <img style="height:300px;" src="img/oaru/sokoban_animation.gif">
-            </figure>
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash26.svg">
+                </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img style="height:300px;" src="img/oaru/sokoban_animation.gif">
+                      <figcaption>Could we learn Sokoban rules from demonstrations?</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
 
 
-            <div class="reference" style="padding-top: 100px;">
-                A. Suárez-Hernández, J. Segovia-Aguas, C. Torras, and
-                G. Alenyà. "Online Action Recognition." In: 2021 AAAI Conference,
+            <div class="reference" style="padding-top: 50px;">
+                <strong>A. Suárez-Hernández</strong>, J. Segovia-Aguas, C. Torras, and
+                G. Alenyà. "Online Action Recognition." In: <strong>AAAI 2021 Conference</strong>,
                 pp. 11981–11989
             </div>
         </section>
@@ -648,7 +732,8 @@
 
         <section>
 
-            <video id="itm-video" loop controls onloadstart="this.playbackRate = 1;">
+
+            <video id="itm-video" controls onloadstart="this.playbackRate = 1;">
                 <source data-src="video/teaser-oaru.mp4" type="video/mp4">
             </video>
 
@@ -688,10 +773,21 @@
         <section>
             <h3 class="numbered-section">INtuitive PROgramming 2</h3>
 
-            <figure>
-                 <img style="height:300px;" src="img/inpro2/teaser.png">
-            </figure>
-            
+            <div class="r-hstack">
+
+                <div style="width:50%">
+                    <img src="img/contributions/splash26.svg">
+                </div>
+
+                <div style="width:50%;" class="fragment">
+                    <figure style="">
+                      <img style="height:300px;" src="img/inpro2/teaching-helena.gif">
+                      <figcaption>Teaching cognitive exercises to a robot</figcaption>
+                    </figure>
+
+                </div>
+
+            </div> 
 
             <div class="reference" style="padding-top: 100px;">
                 A. Suárez-Hernández, A. Andriella, C. Torras,
@@ -757,21 +853,139 @@
             <img style="height: 300px;" src="img/inpro2/igc.png">
         </section>
 
-        <section>
-            <h2 class="numbered-section">Conclusions</h2>
+        <section data-auto-animate>
+            <h2><span class="numeral">6. </span>Conclusions</h2>
 
-            <ul>
-                <li class="fragment">Broad set of topics</li>
-                <li class="fragment">Key tools:
-                    <ul>
-                        <li class="fragment">Simplification</li>
-                        <li class="fragment">Beyond-symbolic reasoning</li>
-                        <li class="fragment">Hands-off learning</li>
-                    </ul>
-                </li>
-                <li class="fragment">Many more challenges! Multi-agent, cooperative, etc.</li>
+            <p class="r-frame fragment" style="font-size:75%;" data-fragment-index="1">New Methods for
+            <span class="fragment highlight-blue" data-fragment-index="2" data-id="item1">Bridging Symbolic-Geometric Reasoning</span>,
+            <span class="fragment highlight-red" data-fragment-index="2" data-id="item2">Addressing Uncertainty</span> and
+            <span class="fragment highlight-green" data-fragment-index="2" data-id="item3">Action Learning</span>
+            in Task Planning for Robotics</p>
+
+            <!--<p class="fragment" data-fragment-index="2">Key advances:</p>-->
+            <!--<ul class="fragment" data-fragment-index="2">-->
+                <!--<li class="">Simplification <span class="fragment">$ \rightarrow $</span> <span class="fragment blue-box"></span> <span class="fragment red-box"></span></li>-->
+                <!--<li class="">Beyond-symbolic reasoning <span class="fragment">$ \rightarrow $</span> <span class="fragment blue-box"></span> </li>-->
+                <!--<li class="">Hands-off learning <span class="fragment">$ \rightarrow $</span> <span class="fragment green-box"></span> </li>-->
+            <!--</ul>-->
+
+        </section>
+
+        <section data-auto-animate>
+            <h2><span class="numeral">6. </span>Conclusions</h2>
+
+            <div class="r-hstack spaced-horizontally" style="font-size:75%;">
+            <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
+            <span data-id="item2" style="color:#ff2c2d;">Addressing Uncertainty</span>
+            <span data-id="item3" style="color:#17ff2e;">Action Learning</span>
+            </div>
+
+
+            <p class="fragment" data-fragment-index="2">Key advances:</p>
+            <ul class="fragment" data-fragment-index="2">
+                <li data-id="simplification" class="">Simplification <span class="fragment" data-fragment-index="3">$ \rightarrow $</span> <span class="fragment blue-box" data-fragment-index="3"></span> <span data-fragment-index="3" class="fragment red-box"></span></li>
+                <li data-id="beyond" class="">Beyond-symbolic reasoning <span data-fragment-index="4" class="fragment">$ \rightarrow $</span> <span data-fragment-index="4" class="fragment blue-box"></span> </li>
+                <li data-id="handsoff" class="">Hands-off learning <span data-fragment-index="5" class="fragment">$ \rightarrow $</span> <span data-fragment-index="5" class="fragment green-box"></span> </li>
             </ul>
 
+        </section>
+
+        <section data-auto-animate>
+            <h2><span class="numeral">6. </span>Conclusions</h2>
+
+            <div class="r-hstack spaced-horizontally" style="font-size:75%;">
+            <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
+            <span data-id="item2" style="color:#ff2c2d;">Addressing Uncertainty</span>
+            <span data-id="item3" style="color:#17ff2e;">Action Learning</span>
+            </div>
+
+
+            <p class="">Key advances:</p>
+            <ul class="">
+                <li data-id="simplification" class="">
+                    Simplification <span class="">$ \rightarrow $</span> <span class="blue-box" ></span> <span class="red-box"></span>
+                    <ul>
+                        <li>Hierarchical representations</li>
+                        <li>Determinization</li>
+                    </ul>
+                </li>
+                <li data-id="beyond" class="">Beyond-symbolic reasoning <span class="">$ \rightarrow $</span> <span class="blue-box"></span> </li>
+                <li data-id="handsoff" class="">Hands-off learning <span class="">$ \rightarrow $</span> <span class="green-box"></span> </li>
+            </ul>
+
+        </section>
+
+        <section data-auto-animate>
+            <h2><span class="numeral">6. </span>Conclusions</h2>
+
+            <div class="r-hstack spaced-horizontally" style="font-size:75%;">
+            <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
+            <span data-id="item2" style="color:#ff2c2d;">Addressing Uncertainty</span>
+            <span data-id="item3" style="color:#17ff2e;">Action Learning</span>
+            </div>
+
+
+            <p class="">Key advances:</p>
+            <ul class="">
+                <li data-id="simplification" class="">
+                    Simplification <span class="">$ \rightarrow $</span> <span class="blue-box" ></span> <span class="red-box"></span>
+                </li>
+                <li data-id="beyond" class="">
+                    Beyond-symbolic reasoning <span class="">$ \rightarrow $</span> <span class="blue-box"></span>
+                    <ul>
+                        <li>Uncertainty checks and collision logic in HTNs</li>
+                        <li>Leveraging simulators</li>
+                    </ul>
+                </li>
+                <li data-id="handsoff" class="">
+                    Hands-off learning <span class="">$ \rightarrow $</span> <span class="green-box"></span>
+                </li>
+            </ul>
+
+        </section>
+
+        <section data-auto-animate>
+            <h2><span class="numeral">6. </span>Conclusions</h2>
+
+            <div class="r-hstack spaced-horizontally" style="font-size:75%;">
+            <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
+            <span data-id="item2" style="color:#ff2c2d;">Addressing Uncertainty</span>
+            <span data-id="item3" style="color:#17ff2e;">Action Learning</span>
+            </div>
+
+
+            <p class="">Key advances:</p>
+            <ul class="">
+                <li data-id="simplification" class="">
+                    Simplification <span class="">$ \rightarrow $</span> <span class="blue-box" ></span> <span class="red-box"></span>
+                </li>
+                <li data-id="beyond" class="">
+                    Beyond-symbolic reasoning <span class="">$ \rightarrow $</span> <span class="blue-box"></span>
+                </li>
+                <li data-id="handsoff" class="">
+                    Hands-off learning <span class="">$ \rightarrow $</span> <span class="green-box"></span>
+                    <ul>
+                        <li>Learning without action signatures</li>
+                        <li>Practical implementation in SAR</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2 class="numbered-section">Future Work</h2>
+
+        </section>
+
+        <section>
+            <h2 style="padding-top:12px;" class="r-fit-text">New Methods for Bridging Symbolic-Geometric Reasoning, Addressing Uncertainty and Action Learning in Task Planning for Robotics</h2>
+
+
+            <div class="r-stack">
+                <img class="r-stretch" src="img/contributions/frame1.svg">
+                <img class="r-stretch" src="img/contributions/frame2.svg">
+            </div>
         </section>
 
       </div>
