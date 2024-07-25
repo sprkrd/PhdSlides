@@ -105,49 +105,67 @@
 
           <aside class="notes">
 
+              <p>
               There're many desirable qualities in robotics: robustness,
               adaptiveness and explainability are a few. Some of them can be
               more easily achieved than others depending on how we choose to
               implement the solution.
+              </p>
 
+              <p>
               Let's imagine a spectrum of techniques, with step-by-step
               algorithms at the left hand side, and fully learning approaches
               like RL at the right hand side.
+              </p>
 
+              <p>
               Now, fully scripted behaviors have some advantages. They can be
               very robust and they are certainly predictable. However,
               we may code in underperforming assumptions about the task,
               the implementation is very time-consuming for the human operator,
               and the
               solutions cannot adapt to new tasks not seen before by the robot.
+              </p>
 
+              <p>
               A few examples of this are assembly lines, tele-operated drones
               and surgical robots.
+              </p>
 
+              <p>
               Now let's jump to the other end of the spectrum. Now, making
               a robot learn a task can be less time-consuming for the operator,
               and now the robot can adapt more easily to new tasks. However,
               the robot might not be robust, or at the very least robustness
               cannot be guaranteed on account of the lack of explainability.
+              </p>
 
+              <p>
               RL has been used to approach fast-paced tasks such as air hockey.
               We also have the example of AlphaGo beating the leading human
               go player. Finally I'll mention quadruped robots that learn
               or refine their locomotion.
+              </p>
 
+              <p>
               In the middle of all this we find task planning, which sort of
               combines the benefits from these two ends. However, robotics
               presents a unique set of obstacles that make the application of
               task planning much more challenging than virtual environments.
+              </p>
 
+              <p>
               A few examples of task planning: videogame AI, web service
               composition, and for the sake of giving an embodied agent as an
               example: the Hubble telescope, which uses task planning for
               scheduling observations.
+              </p>
 
+              <p>
               Our motivation is to address some of the challenges that
               task planning has to overcome in order to be  more appealing for
               roboticists.
+              </p>
 
 
           </aside>
@@ -167,6 +185,7 @@
             </div>
 
             <aside class="notes">
+                <p>
                 What are our objectives, specifically? Well, first of all, there
                 is a gap between symbolic and geometric reasoning that needs to
                 be addressed. This gap is usually not a problem in virtual
@@ -174,21 +193,28 @@
                 that, at the end of the day, actions have to be executed in the
                 real world, and the planning of trajectories seldom is independent
                 from the abstract set of actions.
+                </p>
 
+                <p>
                 Secondly, more often than not actions may have unintended effects.
                 We would like to anticipate them. This includes avoiding
                 risking actions or recovering from them.
+                </p>
 
+                <p>
                 Another form of uncertainty that we want to address is that that
                 comes from partial observability. Many times, the limitations
                 of the sensors don't allow the robot to have all the relevant
                 information about the world.
+                </p>
 
+                <p>
                 We must take into account that, in order for task planning to be
                 an opriton at all. Therefore, the final objective is to endow
                 robots with the ability to
                 learn new skills with the least amount of effort from the operator,
                 and as naturally as possible.
+                </p>
             </aside>
         </section>
 
@@ -201,15 +227,22 @@
             </div>
 
             <aside class="notes">
+                <p>
                 This is the big picture of all the contributions I've made. For
-                now, I don't want to go into detail with them.
+                now, I don't want to go into detail with them, it's just for you
+                to start becoming familiar.
+                </p>
 
+                <p>
                 I do want that the contributions can be divided into two categories.
                 The first one deals with the challenges of planning in the real
                 world when a model is given.
+                </p>
 
+                <p>
                 The second one revolves around acquiring those models from
                 demonstration.
+                </p>
             </aside>
 
 
@@ -247,7 +280,7 @@
 
             <aside class="notes">
 
-                So let's start with this first set of contributions. At this
+                Let's jump right into planning and execution. At this
                 point, I'd like to mention that these contributions have been
                 exemplified with manipulation tasks involving one or more
                 robot arms. In particular, one of the use cases comes from
@@ -282,7 +315,7 @@
                 </div>
 
                 <aside class="notes">
-                    On to the first contribution. In this contribution, we wanted
+                    In the first contribution, we wanted
                     dual-arm robots to perform a complex manipulation task, avoiding
                     self collision and dealing with noisy perceptions. We proposed
                     this task, which consists of inserting pieces in a sphere with
@@ -325,9 +358,10 @@
 
                 <aside class="notes">
                     The first of these challenges is that we want to avoid self-collision between the robots.
-                    But, at the same time we would like to perform the task as quickly as possible, so we would
-                    like to avoid solutions that are too conservative like, per example, returning each robot to
-                    a home or neutral position each time an action is performed.
+                    But, at the same time we would like to perform the task as quickly as possible. Therefore,
+                    solutions that are too conservative like, for example, always moving one robot
+                    at a time and making each robot adopt
+                    a home or neutral position each time an action is performed. Planning, thus, becomes necessary.
 
                     The second one is that the scene is mounted on the ceiling,
                     so it's quite difficult to identify correctly the pieces
@@ -350,30 +384,41 @@
 
             <aside class="notes">
 
-                What's out there? What's usually done? Well, this is the paper we took inspiration from. In it,
+                <p>
+                What's usually done? Well, this is the paper we took inspiration from. In it,
                 Lozano-Pérez and Kaelbling propose a hierarchical decomposition of the goal in order to keep
                 the planning horizon short, they also quantify uncertainty and plan noise reduction actions.
                 However, they do not consider the case of self collision nor the problem of
                 misidentificating objects.
+                </p>
 
+                <p>
                 It is worth mentioning that, although the problem of task and motion integration has
                 been known for quite some time, it was around the time I worked on this contribution
                 that research on this topic surged and became known as TAMP, Task and Motion
                 Planning. Reviews like this offer a taxonomy of the available methods.
+                </p>
 
+                <p>
                 There's been also a surge in tree control structures that have
                 the capability to react quickly to disturbances, and apply
                 appropriate actions. One such example is Behavior Trees.
                 Conversely, we use Hierarchical Task Networks, which are quite
                 similar in spirit.
+                </p>
 
+                <p>
                 And here's further evidence of this trend towards hierarchical
                 control trees. This one is pretty similar to Behavior Trees.
+                </p>
 
+                <p>
                 Finally, I'd like to provide an example of sequential
                 strategies. In this case, task planning and motion planning
                 were not interleaved, like in our case, and the success of the task
-                was entirely depending on a re-planning cycle.
+                was entirely depending on a re-planning cycle, which may
+                compromise efficiency.
+                </p>
 
             </aside>
         </section>
@@ -423,6 +468,16 @@
                 </div>
             </div>
 
+            <aside class="notes">
+                <p>
+                The first specific contribution inside this bigger contribution is how we interleave symbolic and motion planning.
+                We use task decomposition via Hierarchical Task Networks to divide the task of picking a piece from the
+                table and inserting it in the sphere, and this HTN encodes different alternatives for adopting robot
+                poses, checking the relevant geometric constraints along the way instead of all at once.
+                </p>
+
+            </aside>
+
         </section>
 
         <section data-auto-animate>
@@ -437,10 +492,33 @@
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn2.png">
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn3.png">
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn4.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn5.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn6.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn7.png">
+                <!--<img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn5.png">-->
+                <!--<img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn6.png">-->
+                <!--<img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn7.png">-->
             </div>
+
+            <aside class="notes">
+                <p>Let's see an example. Imagine that one arm has picked a piece from
+                the table and that what remains is inserting it in the sphere.
+                The arm that has the sphere attached has to adopt the pose that
+                has the relevant cavity facing up, while the arm that has grasped
+                the piece needs to adopt the ungrasp position on top of the sphere.
+                </p>
+
+                <p>
+                What the HTN does is: if the robots are already at the required
+                position, nothing else is done in this branch. Otherwise, it tries
+                to move both arms at the same time to the requested position,
+                invoking the motion planner. If the motion planner does not find a solution,
+                we jump to the next alternative, which is to conservatively move the
+                robots to their home position, and then move them to the requested position.
+                </p>
+
+                <p>
+                Notice that here the motion planner is called as needed, during the
+                symbolic planning process, without any re-plan needed.
+                </p>
+            </aside>
 
         </section>
 
@@ -453,7 +531,7 @@
 
                     <ul>
                         <li style="opacity:50%;">Encode dual-arm alternatives in HTNs (<strong>O1</strong>)</li>
-                        <li >Quantify uncertainty (<strong>O3</strong>)</li>
+                        <li >Quantify uncertainty (<strong>O3</strong>) and preparatory actions</li>
                     </ul>
 
                 </div>
@@ -462,6 +540,14 @@
                   <img class="" style="width:100%;" src="img/dual-arm-planning/htn.png">
                 </div>
             </div>
+
+            <aside class="notes">
+            <p>
+            The second big advance of this contribution is how we quantify uncertainty and how the
+            uncertainty affects the path expanded by the HTN, and also how geometric criterions can
+            trigger preparatory actions.
+            </p>
+            </aside>
 
         </section>
 
@@ -473,12 +559,12 @@
                 <div style="width:50%;"></div>
 
                 <img class="r-stretch" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn8.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn9.png">
-                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn10.png">
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn11.png">
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn12.png">
                 <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn13.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn8.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn9.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn10.png">
                 <figure style="vertical-align:bottom;position:absolute;width:70%;background-color:white;border:black dashed; padding:20px;" class="fragment">
                   <img style="height:200px;" src="img/dual-arm-planning/pushing.gif">
                   <img style="height:200px;" src="img/dual-arm-planning/dispel-noise.png">
@@ -486,6 +572,29 @@
                 </figure>
 
             </div>
+
+            <aside class="notes">
+            <p>
+            In our set-up, pieces are initially on top of table, the camera is at the ceiling
+            and it's noisy, so it may be hard to identify correctly the shape of a piece.
+            Let's see an example: say we want to insert a piece in the sphere. Before that,
+            we have to ensure that we have identified the piece correctly. If the uncertainty
+            about a piece shape is low enough, then we're done. Otherwise, an information
+            gathering action is triggered. This action consists in bringing the piece closer
+            to the camera. One very important difference between this and the work of
+            Lozano-Pérez and Kaelbling that I presented earlier is that the subject
+            of uncertainty is a critical quality of an object, rather than just its position.
+            Therefore, the plan can change, qualitatively: before we thought we were handling
+            a piece, but we're handling another.
+            </p>
+
+            <p>
+            Very similar procedure for reshaping actions. Before picking a piece,
+            the robot checks that it is isolated enough so the gripper doesn't collide
+            with other pieces in the downwards motion. If not, the planner takes the
+            necessary steps to push the offending pieces away.
+            </p>
+            </aside>
 
         </section>
 
@@ -517,6 +626,47 @@
                 </figure>
               </div>
             </div>
+
+            <aside class="notes">
+                <p>
+                For the results I'm not going to go into much detail. Essentially, I have
+                implemented a couple of fully scripted baselines and other planning
+                algorithms in different scenarios of varying complexity.
+                Algorithm C for instance is planning with information
+                gathering actions, but conservatively moving the robots to their home
+                position as an intermediate step. Algorithm F is our proposal.
+                </p>
+
+                <p>
+                The first column of the tables represents planning time, which is
+                obviously 0 for the scripted behaviors. Planning algorithm C has
+                a very low planning time because it doesn't perform motion planning,
+                and our algorithm has a little bit of planning overhead because
+                it does perform motion planning to move the two arms cooperatively.
+                </p>
+
+                <p>
+                The next column is the execution time, very low for all planning
+                flavors except C, essentially about the same.
+                </p>
+
+                <p>
+                The next column is the total time, planning plus execution, which
+                you can see is lower for our proposal.
+                </p>
+
+                <p>
+                This is the reported number of re-plans that had to be triggered,
+                it's when a piece has been misidentified and the close examination
+                action has helped correct the course of execution.
+                </p>
+
+                <p>
+                And this is the number of times a piece has been handled incorrectly,
+                by trying to insert it in the wrong cavity. This only happens
+                in algorithm A because this algorithm always trust the initial state estimation.
+                </p>
+            </aside>
         </section>
 
         <section>
@@ -524,6 +674,11 @@
             <video class="r-stretch" controls onloadstart="this.playbackRate = 10;">
                 <source data-src="http://www.iri.upc.edu/groups/perception/dual_arm_planning/video/itm_demo_real.mp4" type="video/mp4">
             </video>
+            <aside class="notes">
+                Here's a short video showing a qualitative experiment, and mostly what I want you to notice here
+                is how the robot that fetches the pieces avoids collisions with the sphere robot without moving
+                it to its home position.
+            </aside>
         </section>
 
         <section>
@@ -554,6 +709,15 @@
                   with disassembly planning." In <strong>IEEE RA-L (2019)</strong>, pp. 2282–2288.
             </div>
 
+            <aside class="notes">
+                <p>
+                In this contribution we shift our focus now to action with more
+                than one possible outcome. And now, the manipulation use case
+                is disassembling electromechanical devices, which again,
+                shows several problems that are general to robotics.
+                </p>
+            </aside>
+
         </section>
 
         <section>
@@ -580,6 +744,20 @@
                 </div>
             </div>
 
+            <aside class="notes">
+                <p>
+                What are the problems we face? I've already advanced that one
+                of them is actions with uncertain effects, and we model this
+                probabilistically. In the most simple terms, this can means that
+                some actions may fail, and that some can even result in a dead-end,
+                like breaking a tool.
+                </p>
+                <p>
+                And also, it's very frequent that some components occlude others,
+                so we want to handle that as well.
+                </p>
+            </aside>
+
         </section>
 
         <section>
@@ -592,6 +770,33 @@
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature4.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/handling-uncertain-outcomes/literature5.svg">
             </div>
+
+            <aside class="notes">
+                <p>The first work I'd like to mention is FF-Replan, one of the
+                earliest attempts at tackling stochastic planning problems. It had
+                the problem that it was way too optimistic, and it underperformed
+                is many interesting planning domains.</p>
+
+                <p>Then we have more sophisticated planning algorithms like
+                Labeled Real Time Dynamic Programming, which is based on the
+                Real Time A* algorithm. This is one of the most known algorithms
+                for stochastic planning, together with Monte Carlo Tree Search,
+                and we will compare our method to this one.</p>
+
+                <p>Then we have approaches specific to disassembly. This work in
+                particular fails to acknowledge outcome stochasticity and components
+                hidden by occlusions
+                </p>
+
+                <p>
+                More recently, we have the Liam robot, by Apple, which implements
+                a step-by-step algorithm rather, so it falls at the left hand
+                side of the spectrum of solutions I showed you earlier.
+                </p>
+
+                <p>And we also have this work, which acknowledges hidden components,
+                but does not plan for uncertain outcomes.</p>
+            </aside>
         </section>
 
         <section data-auto-animate>
@@ -610,6 +815,14 @@
                 <!--<img class="fragment" src="img/handling-uncertain-outcomes/subtask-selection.png">-->
               <!--</figure>-->
             <!--</div>-->
+            <aside class="notes">
+                <p>This is our proposed decision unit. The critical contributions
+                here are the subtask selector module, which performs dependency
+                analysis and extracts smaller tasks that can be solved independently
+                from each other, and the determinization module, that takes a problem,
+                a Markov Decision Process, and produces a deterministic planning problem
+                encoding the transition probabilities as costs.</p>
+            </aside>
 
         </section>
 
@@ -624,6 +837,21 @@
                 <img class="fragment" style="width:800px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="2" src="img/handling-uncertain-outcomes/subtask-selection.svg">
             </div>
             </div>
+
+            <aside class="notes">
+                <p>
+                Let's go to the first of these two. Here's a pictoric representation
+                of what it does: it identifies individual tasks, computes precedence
+                relationships among them based on occlusions and then extract
+                the tasks with no topological restrictions. Here's a more
+                real example, also with components that are completely hidden
+                and that the planner knows nothing about, shown in gray.
+                You can see here that, instead
+                of having one big POMDP, we get the smaller MDPs at the right
+                that can be solved individually, and the partial observability
+                can be handled with periodic rotations of the feasible tasks.
+                </p>
+            </aside>
         </section>
 
         <section data-auto-animate>
@@ -634,15 +862,36 @@
             <div data-id="box" style="border:solid red;width:120px;height:30px;position:absolute;top:129px;left:44px;"></div>
             <img class="" style="width:800px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="1" src="img/handling-uncertain-outcomes/determinization.svg">
             </div>
+
+            <aside class="notes">
+                <p>
+                Now, determinization consists on transforming a probabilistic
+                problem into a deterministic one. There are several ways of doing this,
+                and the one we've picked is call alpha cost likelihood. What this
+                determinization strategy does is introduce a new action for each outcome,
+                as if the outcomes were conscious decisions made by the agent
+                and it assigns each outcome a cost that is higher the lower the probability
+                gets. There's another component to this cost which is the original cost
+                of the action, and this cost is weighted by a parameter alpha.
+                What this allows us to do is balance eagerness vs safety: if the alpha
+                is 0 we only take into account the probabilities, and if it's higher
+                we put more weight in the original cost.
+
+                Now, while I did not invent alpha cost likelihood, I must say it's
+                been barely used in the literature, with only a couple of papers or
+                three that use it. So I wanted to bring more attention to this technique
+                that I think is superior to others like All-Outcome Determinization
+                or Single Outcome Determinization, and also in my work I put more
+                effort on analyzing this balance between risk and safety.
+                </p>
+            </aside>
         </section>
 
         <section>
             <h4>Results</h4>
 
             <div class="r-stack">
-                <img class="fragment fade-out" data-fragment-index="1" src="img/handling-uncertain-outcomes/results.png">
-
-                <div class="r-hstack fragment" data-fragment-index="1">
+                <div class="r-hstack" data-fragment-index="1">
                     <figure>
                     <img src="img/handling-uncertain-outcomes/results_success.svg">
                     <figcaption>Success ratio</figcaption>
