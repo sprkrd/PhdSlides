@@ -68,6 +68,16 @@
               <img src="assets/logos/UPC_logo.svg" height="50px"/>
           </div>
 
+          <aside class="notes">
+
+              The title promises three kind of advances: closer coordination
+              between task and motion planning, handling uncertainty and
+              learning action operators. This is all in hopes of
+              making AI planning more widespread in robotics to enjoy its
+              advantages. Let's see what those advantages are.
+
+          </aside>
+
         </section>
 
 
@@ -91,6 +101,57 @@
                 <img class="r-stretch fragment" src="img/motivation/frame13.svg">
                 <img class="r-stretch fragment" src="img/motivation/frame14.svg">
             </div>
+
+
+          <aside class="notes">
+
+              There're many desirable qualities in robotics: robustness,
+              adaptiveness and explainability are a few. Some of them can be
+              more easily achieved than others depending on how we choose to
+              implement the solution.
+
+              Let's imagine a spectrum of techniques, with step-by-step
+              algorithms at the left hand side, and fully learning approaches
+              like RL at the right hand side.
+
+              Now, fully scripted behaviors have some advantages. They can be
+              very robust and they are certainly predictable. However,
+              we may code in underperforming assumptions about the task,
+              the implementation is very time-consuming for the human operator,
+              and the
+              solutions cannot adapt to new tasks not seen before by the robot.
+
+              A few examples of this are assembly lines, tele-operated drones
+              and surgical robots.
+
+              Now let's jump to the other end of the spectrum. Now, making
+              a robot learn a task can be less time-consuming for the operator,
+              and now the robot can adapt more easily to new tasks. However,
+              the robot might not be robust, or at the very least robustness
+              cannot be guaranteed on account of the lack of explainability.
+
+              RL has been used to approach fast-paced tasks such as air hockey.
+              We also have the example of AlphaGo beating the leading human
+              go player. Finally I'll mention quadruped robots that learn
+              or refine their locomotion.
+
+              In the middle of all this we find task planning, which sort of
+              combines the benefits from these two ends. However, robotics
+              presents a unique set of obstacles that make the application of
+              task planning much more challenging than virtual environments.
+
+              A few examples of task planning: videogame AI, web service
+              composition, and for the sake of giving an embodied agent as an
+              example: the Hubble telescope, which uses task planning for
+              scheduling observations.
+
+              Our motivation is to address some of the challenges that
+              task planning has to overcome in order to be  more appealing for
+              roboticists.
+
+
+          </aside>
+
         </section>
 
         <section>
@@ -104,6 +165,31 @@
                 <img class="r-stretch fragment" src="img/objectives/frame3.svg">
                 <img class="r-stretch fragment" src="img/objectives/frame4.svg">
             </div>
+
+            <aside class="notes">
+                What are our objectives, specifically? Well, first of all, there
+                is a gap between symbolic and geometric reasoning that needs to
+                be addressed. This gap is usually not a problem in virtual
+                applications, but in robotics we have to take into consideration
+                that, at the end of the day, actions have to be executed in the
+                real world, and the planning of trajectories seldom is independent
+                from the abstract set of actions.
+
+                Secondly, more often than not actions may have unintended effects.
+                We would like to anticipate them. This includes avoiding
+                risking actions or recovering from them.
+
+                Another form of uncertainty that we want to address is that that
+                comes from partial observability. Many times, the limitations
+                of the sensors don't allow the robot to have all the relevant
+                information about the world.
+
+                We must take into account that, in order for task planning to be
+                an opriton at all. Therefore, the final objective is to endow
+                robots with the ability to
+                learn new skills with the least amount of effort from the operator,
+                and as naturally as possible.
+            </aside>
         </section>
 
         <section>
@@ -113,6 +199,20 @@
                 <img class="r-stretch" src="img/contributions/frame1.svg">
                 <img class="fragment r-stretch" src="img/contributions/frame2.svg">
             </div>
+
+            <aside class="notes">
+                This is the big picture of all the contributions I've made. For
+                now, I don't want to go into detail with them.
+
+                I do want that the contributions can be divided into two categories.
+                The first one deals with the challenges of planning in the real
+                world when a model is given.
+
+                The second one revolves around acquiring those models from
+                demonstration.
+            </aside>
+
+
 
             <!--<div class="r-hstack" style="justify-content:space-evenly;">-->
                 <!--<figure style="width:500px;" class="fragment">-->
@@ -144,6 +244,20 @@
                     <figcaption>Manipulation use cases</figcaption>
                 </figure>
             </div>
+
+            <aside class="notes">
+
+                So let's start with this first set of contributions. At this
+                point, I'd like to mention that these contributions have been
+                exemplified with manipulation tasks involving one or more
+                robot arms. In particular, one of the use cases comes from
+                IMAGINE, an European H2020 research programme whose scientific
+                goal was to enable robots to understand their surroundings.
+                This scientific vision was channeled through the particular use
+                case of electromechanical device disassembly.
+
+
+            </aside>
         </section>
 
         <section>
@@ -166,6 +280,16 @@
                       <figcaption>... with dual-arm robot set-ups</figcaption>
                     </figure>
                 </div>
+
+                <aside class="notes">
+                    On to the first contribution. In this contribution, we wanted
+                    dual-arm robots to perform a complex manipulation task, avoiding
+                    self collision and dealing with noisy perceptions. We proposed
+                    this task, which consists of inserting pieces in a sphere with
+                    cavities, as the motivating example. The reason why is that
+                    this task has many challenges/opportunities that are representative
+                    of the difficulties we often face in robotics.
+                </aside>
 
             </div>
 
@@ -198,6 +322,17 @@
                     </figure>
                     <img class="fragment" data-fragment-index="1" style="width:375px;" src="img/dual-arm-planning/example-partial-observability.png">
                 </div>
+
+                <aside class="notes">
+                    The first of these challenges is that we want to avoid self-collision between the robots.
+                    But, at the same time we would like to perform the task as quickly as possible, so we would
+                    like to avoid solutions that are too conservative like, per example, returning each robot to
+                    a home or neutral position each time an action is performed.
+
+                    The second one is that the scene is mounted on the ceiling,
+                    so it's quite difficult to identify correctly the pieces
+                    that are placed on top of the table.
+                </aside>
             </div>
 
         </section>
@@ -212,21 +347,143 @@
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature4.svg">
                 <img class="r-stretch fragment fade-in-then-semi-out" src="img/dual-arm-planning/literature5.svg">
             </div>
+
+            <aside class="notes">
+
+                What's out there? What's usually done? Well, this is the paper we took inspiration from. In it,
+                Lozano-Pérez and Kaelbling propose a hierarchical decomposition of the goal in order to keep
+                the planning horizon short, they also quantify uncertainty and plan noise reduction actions.
+                However, they do not consider the case of self collision nor the problem of
+                misidentificating objects.
+
+                It is worth mentioning that, although the problem of task and motion integration has
+                been known for quite some time, it was around the time I worked on this contribution
+                that research on this topic surged and became known as TAMP, Task and Motion
+                Planning. Reviews like this offer a taxonomy of the available methods.
+
+                There's been also a surge in tree control structures that have
+                the capability to react quickly to disturbances, and apply
+                appropriate actions. One such example is Behavior Trees.
+                Conversely, we use Hierarchical Task Networks, which are quite
+                similar in spirit.
+
+                And here's further evidence of this trend towards hierarchical
+                control trees. This one is pretty similar to Behavior Trees.
+
+                Finally, I'd like to provide an example of sequential
+                strategies. In this case, task planning and motion planning
+                were not interleaved, like in our case, and the success of the task
+                was entirely depending on a re-planning cycle.
+
+            </aside>
         </section>
 
-        <section>
+        <!--<section>-->
+            <!--<h4>Specific contributions</h4>-->
+
+            <!--<div class="r-hstack">-->
+
+                <!--<div style="width:50%;">-->
+
+                    <!--<ul>-->
+                        <!--<li class="fragment semi-fade-out" data-fragment-index="1">Encode dual-arm alternatives in HTNs (<strong>O1</strong>)</li>-->
+                        <!--<li class="fragment" data-fragment-index="1">Quantify uncertainty (<strong>O3</strong>)</li>-->
+                    <!--</ul>-->
+
+                <!--</div>-->
+
+                <!--<div class="r-stack" style="width:50%">-->
+                  <!--<img class="fragment fade-out" data-fragment-index="1" style="width:100%;" src="img/dual-arm-planning/htn.png">-->
+                  <!--<figure style="vertical-align:bottom;" class="fragment" data-fragment-index="1">-->
+                    <!--<img style="width:400px;" src="img/dual-arm-planning/dispel-noise.png">-->
+                    <!--<img style="width:400px;" src="img/dual-arm-planning/pushing.gif">-->
+                    <!--<figcaption>Information gathering (top), reshaping (bottom)</figcaption>-->
+                  <!--</figure>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</section>-->
+
+        <section data-auto-animate>
             <h4>Specific contributions</h4>
 
-            <div class="r-hstack" style="justify-content:space-evenly;">
-              <figure style="width:40%;vertical-align:bottom;" class="">
-                <img style="width:400px;" src="img/dual-arm-planning/dispel-noise.png">
-                <img style="width:400px;" src="img/dual-arm-planning/pushing.gif">
-                <figcaption>Information gathering actions and reshaping actions</figcaption>
-              </figure>
-              <figure class="fragment" style="width:60%;vertical-align:bottom;">
-                <img style="width:100%;" src="img/dual-arm-planning/htn.png">
-                <figcaption>Task decomposition (HTN)</figcaption>
-              </figure>
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="">Encode dual-arm alternatives in HTNs (<strong>O1</strong>)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                  <img class="" style="width:100%;" src="img/dual-arm-planning/htn.png">
+                </div>
+            </div>
+
+        </section>
+
+        <section data-auto-animate>
+            <h4>Specific contributions</h4>
+
+            <div class="r-hstack">
+
+                <div style="width:50%;"></div>
+
+                <img class="r-stretch" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn1.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn2.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn3.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn4.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn5.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn6.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn7.png">
+            </div>
+
+        </section>
+
+        <section data-auto-animate>
+            <h4>Specific contributions</h4>
+
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li style="opacity:50%;">Encode dual-arm alternatives in HTNs (<strong>O1</strong>)</li>
+                        <li >Quantify uncertainty (<strong>O3</strong>)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                  <img class="" style="width:100%;" src="img/dual-arm-planning/htn.png">
+                </div>
+            </div>
+
+        </section>
+
+        <section data-auto-animate>
+            <h4>Specific contributions</h4>
+
+            <div class="r-hstack">
+
+                <div style="width:50%;"></div>
+
+                <img class="r-stretch" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn8.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn9.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn10.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn11.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn12.png">
+                <img class="r-stretch fragment fade-in-then-out" style="position:absolute;width:100%;" src="img/dual-arm-planning/htn13.png">
+                <figure style="vertical-align:bottom;position:absolute;width:70%;background-color:white;border:black dashed; padding:20px;" class="fragment">
+                  <img style="height:200px;" src="img/dual-arm-planning/pushing.gif">
+                  <img style="height:200px;" src="img/dual-arm-planning/dispel-noise.png">
+                  <figcaption>Reshaping (left), information gathering (right)</figcaption>
+                </figure>
 
             </div>
 
@@ -238,10 +495,18 @@
 
             <div class="r-hstack" style="justify-content:space-evenly;">
               <figure>
-                  <img src="img/dual-arm-planning/results.svg">
+                  <div class="r-stack">
+                    <img src="img/dual-arm-planning/results.svg">
+                    <img class="fragment" src="img/dual-arm-planning/results1.svg">
+                    <img class="fragment fade-in-then-out" src="img/dual-arm-planning/results2.svg">
+                    <img class="fragment fade-in-then-out" src="img/dual-arm-planning/results3.svg">
+                    <img class="fragment fade-in-then-out" src="img/dual-arm-planning/results4.svg">
+                    <img class="fragment fade-in-then-out" src="img/dual-arm-planning/results5.svg">
+                    <img class="fragment fade-in-then-out" src="img/dual-arm-planning/results6.svg">
+                  </div>
                   <figcaption>Results (simulation)</figcaption>
               </figure>
-              <div class="r-vstack fragment">
+              <div class="r-vstack">
                 <figure class="">
                   <img style="height:240px;" src="img/dual-arm-planning/algorithm-A-scenario-a.gif">
                   <figcaption>Algorithm A in (a)</figcaption>
@@ -366,7 +631,7 @@
 
             <div style="width:100%;height:700px;position:absolute">
             <img style="height:200px;max-height:none;position:absolute;top:0px;left:0px;" src="img/handling-uncertain-outcomes/architecture.png">
-            <div data-id="box" style="border:solid red;width:120px;height:30px;position:absolute;top:99px;left:44px;"></div>
+            <div data-id="box" style="border:solid red;width:120px;height:30px;position:absolute;top:129px;left:44px;"></div>
             <img class="" style="width:800px;position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);" data-fragment-index="1" src="img/handling-uncertain-outcomes/determinization.svg">
             </div>
         </section>
@@ -374,7 +639,20 @@
         <section>
             <h4>Results</h4>
 
-            <img src="img/handling-uncertain-outcomes/results.png">
+            <div class="r-stack">
+                <img class="fragment fade-out" data-fragment-index="1" src="img/handling-uncertain-outcomes/results.png">
+
+                <div class="r-hstack fragment" data-fragment-index="1">
+                    <figure>
+                    <img src="img/handling-uncertain-outcomes/results_success.svg">
+                    <figcaption>Success ratio</figcaption>
+                    </figure>
+                    <figure class="fragment">
+                    <img src="img/handling-uncertain-outcomes/results_cost.svg">
+                    <figcaption>Cost (#actions)</figcaption>
+                    </figure>
+                </div>
+            </div>
 
         </section>
 
@@ -490,27 +768,102 @@
 
         </section>
 
-        <section>
-            <h4>Algorithm visualization (only target)</h4>
+        <!--<section>-->
+            <!--<h4>Algorithm visualization (only target)</h4>-->
 
-            <video class="r-stretch" controls>
-                <source data-src="video/bandits_wo_sim.mp4" type="video/mp4">
-            </video>
+            <!--<video class="r-stretch" controls>-->
+                <!--<source data-src="video/bandits_wo_sim.mp4" type="video/mp4">-->
+            <!--</video>-->
 
-        </section>
+        <!--</section>-->
 
-        <section>
-            <h4>Experiments</h4>
+        <section data-auto-animate>
+            <h4>Results</h4>
 
-            <div class="r-vstack">
+            <div data-id="plots" class="r-vstack">
                 <figure>
                     <img src="img/leveraging-simulators/results-simulation.png">
-                    <figcaption>Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                    <figcaption data-id="caption1">Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
                 </figure>
-                <figure style="padding-top:50px;">
+                <figure style="padding-top:10px;">
                     <img src="img/leveraging-simulators/results-robot.png">
-                    <figcaption>Results simulation $ \rightarrow $ real robot</figcaption>
+                    <figcaption data-id="caption2">Results simulation $ \rightarrow $ real robot</figcaption>
                 </figure>
+            </div>
+
+            <div class="fragment" data-id="box" style="position:absolute;border:red solid;top:73px;left:30px;width:1115px;height:300px">
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h4>Results</h4>
+
+            <div data-id="plots" class="r-vstack">
+                <figure>
+                    <img src="img/leveraging-simulators/results-simulation.png">
+                    <figcaption data-id="caption1">Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                </figure>
+                <figure style="padding-top:10px;">
+                    <img src="img/leveraging-simulators/results-robot.png">
+                    <figcaption data-id="caption2">Results simulation $ \rightarrow $ real robot</figcaption>
+                </figure>
+            </div>
+
+            <div data-id="box" style="position:absolute;border:red solid;top:407px;left:30px;width:1115px;height:300px">
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h4>Results</h4>
+
+            <div data-id="plots" class="r-vstack">
+                <figure>
+                    <img src="img/leveraging-simulators/results-simulation.png">
+                    <figcaption data-id="caption1">Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                </figure>
+                <figure style="padding-top:10px;">
+                    <img src="img/leveraging-simulators/results-robot.png">
+                    <figcaption data-id="caption2">Results simulation $ \rightarrow $ real robot</figcaption>
+                </figure>
+            </div>
+
+            <div data-id="box" style="position:absolute;border:red solid;top:73px;left:30px;width:400px;height:630px;">
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h4>Results</h4>
+
+            <div data-id="plots" class="r-vstack">
+                <figure>
+                    <img src="img/leveraging-simulators/results-simulation.png">
+                    <figcaption data-id="caption1">Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                </figure>
+                <figure style="padding-top:10px;">
+                    <img src="img/leveraging-simulators/results-robot.png">
+                    <figcaption data-id="caption2">Results simulation $ \rightarrow $ real robot</figcaption>
+                </figure>
+            </div>
+
+            <div data-id="box" style="position:absolute;border:red solid;top:73px;left:406px;width:400px;height:630px;">
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h4>Results</h4>
+
+            <div data-id="plots" class="r-vstack">
+                <figure>
+                    <img src="img/leveraging-simulators/results-simulation.png">
+                    <figcaption data-id="caption1">Results low-accuracy simulation $ \rightarrow $ high-accuracy simulation</figcaption>
+                </figure>
+                <figure style="padding-top:10px;">
+                    <img src="img/leveraging-simulators/results-robot.png">
+                    <figcaption data-id="caption2">Results simulation $ \rightarrow $ real robot</figcaption>
+                </figure>
+            </div>
+
+            <div data-id="box" style="position:absolute;border:red solid;top:73px;left:786px;width:400px;height:630px;">
             </div>
         </section>
 
@@ -562,7 +915,7 @@
 
             <div class="r-hstack">
                 <ul>
-                    <li>Learning STRIPS state traces (<strong>O4</strong>)</li>
+                    <li class="fragment semi-fade-out" data-fragment-index="1">Learning STRIPS state traces (<strong>O4</strong>)</li>
                     <li class="fragment" data-fragment-index="1"><strong>Minimal information</strong></li>
                 </ul>
 
@@ -586,11 +939,32 @@
         </section>
 
         <section>
+            <h4>FAMA/DAM compilation</h4>
+
+            <p>Learn action models for a given configuration (known #actions, #parameters per action)</p>
+
+            <div class="r-hstack spaced-horizontally">
+                <figure>
+                <img class="" style="height:225px;" src="img/udam/strips.png">
+                <figcaption>STRIPS action</figcaption>
+                </figure>
+                <figure class="fragment">
+                <img class="" style="height:225px;" src="img/udam/fama.png">
+                <figcaption>Learn via classical planning</figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+        <section>
             <h4>Specific contributions</h4>
 
             <figure>
-                <img class=""src="img/udam/fama.png">
-                <figcaption>Learning when action signatures are known (FAMA-like)</figcaption>
+                <div class="r-stack">
+                    <img class="" style="width:800px;" src="img/udam/udam1.svg">
+                    <img class="fragment" style="width:800px;" src="img/udam/udam2.svg">
+                </div>
+                <figcaption>Unsupervised Discovery of Action Models</figcaption>
             </figure>
         </section>
 
@@ -635,11 +1009,18 @@
         <section>
             <h4>Addressed problems</h4>
 
-            <figure>
-                 <img style="height:300px;" src="img/inpro/games.png">
-                 <figcaption>Intuitive programming of Socially Assistive Robots</figcaption>
-            </figure>
-            
+            <div class="r-hstack">
+                <ul>
+                    <li class="fragment" data-fragment-index="1">How can non-expert users extend robot's behavior (<strong>O4</strong>)?</li>
+                </ul>
+
+                <figure>
+                     <img style="height:300px;" src="img/inpro/games.png">
+                     <figcaption>Cognitive exercises set-up</figcaption>
+                </figure>
+
+            </div>
+ 
         </section>
 
         <section>
@@ -655,10 +1036,25 @@
 
         <section>
             <h4>Specific contributions</h4>
-            <figure>
-                 <img style="height:300px;" src="img/inpro/screen.png">
-                 <figcaption>Intuitive programming of Socially Assistive Robots</figcaption>
-            </figure>
+            
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="fragment semi-fade-out" data-fragment-index="1"><strong>IN</strong>tuitive <strong>PRO</strong>gramming (INPRO): practical application of action model learning algorithm (INPRO)</li>
+                        <li class="fragment" data-fragment-index="1">Feedback strategies to inform teacher</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                    <figure class="fragment" data-fragment-index="1">
+                        <img style="width:75%" src="img/inpro/screen.png">
+                        <figcaption>INPRO feedback</figcaption>
+                    </figure>
+                </div>
+            </div>
 
         </section>
 
@@ -727,7 +1123,21 @@
         <section>
             <h4>Specific contributions</h4>
 
-            <img style="height:600px;" src="img/oaru/teaser.svg">
+            <div class="r-hstack">
+
+                <div style="width:50%;">
+
+                    <ul>
+                        <li class="fragment semi-fade-out" data-fragment-index="1">New algorithm for merging actions (AU)</li>
+                        <li class="fragment" data-fragment-index="1">Online Action through Unification (OARU)</li>
+                    </ul>
+
+                </div>
+
+                <div class="r-stack" style="width:50%">
+                    <img style="height:600px;" src="img/oaru/teaser.svg">
+                </div>
+            </div>
         </section>
 
         <section>
@@ -776,7 +1186,7 @@
             <div class="r-hstack">
 
                 <div style="width:50%">
-                    <img src="img/contributions/splash26.svg">
+                    <img src="img/contributions/splash27.svg">
                 </div>
 
                 <div style="width:50%;" class="fragment">
@@ -801,14 +1211,25 @@
             <h4>Addressed problems</h4>
 
             <ul>
-                <li class="fragment">Learn more complex exercises</li>
-                <li class="fragment">Until now: robot hasn't been very proactive</li>
+                <li class="fragment fade-in-then-semi-out" data-fragment-index="1">Learn more complex exercises</li>
+                <li class="fragment" data-fragment-index="2">Until now: robot hasn't been very proactive</li>
                 <li class="fragment">Learn goals?</li>
             </ul>
         </section>
 
         <section>
-            <h4>Specific contribution</h4>
+            <h4>Specific contributions</h4>
+
+            <ul>
+                <li class="fragment semi-fade-out" data-fragment-index="1">Adopt OARU in SAR scenario</li>
+                <li class="fragment fade-in-then-semi-out" data-fragment-index="1">Improve OARU with negative examples</li>
+                <li class="fragment fade-in-then-semi-out">Learn goals</li>
+                <li class="fragment fade-in-then-semi-out">Proactive questioning</li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>Execution example</h4>
 
             <div class="r-stack">
                 <img class="r-stretch" src="img/inpro2/method1_frame1.svg">
@@ -849,12 +1270,13 @@
         <section>
             <h4>Qualitative results</h4>
 
-            <img style="height: 300px;" src="img/inpro2/aoa.png">
-            <img style="height: 300px;" src="img/inpro2/igc.png">
+            <video class="r-stretch" loop controls>
+                <source data-src="video/inpro2.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section data-auto-animate>
-            <h2><span class="numeral">6. </span>Conclusions</h2>
+            <h2 class="numbered-section">Conclusions</h2>
 
             <p class="r-frame fragment" style="font-size:75%;" data-fragment-index="1">New Methods for
             <span class="fragment highlight-blue" data-fragment-index="2" data-id="item1">Bridging Symbolic-Geometric Reasoning</span>,
@@ -872,7 +1294,7 @@
         </section>
 
         <section data-auto-animate>
-            <h2><span class="numeral">6. </span>Conclusions</h2>
+            <h2 class="numbered-section dont-increment">Conclusions</h2>
 
             <div class="r-hstack spaced-horizontally" style="font-size:75%;">
             <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
@@ -891,7 +1313,7 @@
         </section>
 
         <section data-auto-animate>
-            <h2><span class="numeral">6. </span>Conclusions</h2>
+            <h2 class="numbered-section dont-increment">Conclusions</h2>
 
             <div class="r-hstack spaced-horizontally" style="font-size:75%;">
             <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
@@ -916,7 +1338,7 @@
         </section>
 
         <section data-auto-animate>
-            <h2><span class="numeral">6. </span>Conclusions</h2>
+            <h2 class="numbered-section dont-increment">Conclusions</h2>
 
             <div class="r-hstack spaced-horizontally" style="font-size:75%;">
             <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
@@ -945,7 +1367,7 @@
         </section>
 
         <section data-auto-animate>
-            <h2><span class="numeral">6. </span>Conclusions</h2>
+            <h2 class="numbered-section dont-increment">Conclusions</h2>
 
             <div class="r-hstack spaced-horizontally" style="font-size:75%;">
             <span data-id="item1" style="color:#1b91ff;">Bridging Symbolic-Geometric Reasoning</span>
@@ -975,6 +1397,31 @@
 
         <section>
             <h2 class="numbered-section">Future Work</h2>
+
+            <ul>
+                <li class="">Simplification
+                    <ul>
+                        <li>Further strategies to decompose tasks</li>
+                        <li>New determinization algorithms</li>
+                    </ul>
+                </li>
+
+                <li class="fragment">Beyond symbolic reasoning
+                    <ul>
+                        <li>Leverage more than two environments</li>
+                        <li>Compare interleaved simulation/real execution against transfer learning</li>
+                    </ul>
+                </li>
+
+                <li class="fragment">Hands-off learning
+                    <ul>
+                        <li>Improve prompting strategies (INPRO 2)</li>
+                        <li>Combine OARU/INPRO2 with learned embeddings</li>
+                    </ul>
+                </li>
+
+
+            </ul>
 
         </section>
 
